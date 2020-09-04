@@ -25,6 +25,7 @@ Let's say we want to add a new section to the documentation for Grid-related doc
 * Type in the file name, and **ensure it ends with a .md extension** (this makes it a **markdown** file); an example is **grid.md**
 * You can now follow the [Github Markdown Syntax Guide](https://guides.github.com/features/mastering-markdown/) for formatting and adding your content
 * Once done, commit your changes at the bottom of the page. The changes will now cause Jekyll to rebuild the site, and in a few moments, those changes will be live on the site
+* To link to this new section, you can use the **relative path** to the file from another page. For example, if we wanted to link to this new page from the home page, we would edit **index.md** and write `[Grid documentation](./grid/grid.md)`
 
 ## Contributing Guidelines
 
