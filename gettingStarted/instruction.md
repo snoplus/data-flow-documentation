@@ -7,4 +7,6 @@
   * To gain access, email snopluscode@snolab.ca including: GitHub userid, your name and institution.
   * For the specific instruction of GitHub and Git, please click [here](https://www.snolab.ca/snoplus/private/DocDB/cgi/ShowDocument?docid=1462), and download the file to see.
   
+* ### Compute Canada Account
+  
 * ### SnoLab Account
