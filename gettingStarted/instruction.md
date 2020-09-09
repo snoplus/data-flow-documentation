@@ -8,5 +8,7 @@
   * For the specific instruction of GitHub and Git, please click [here](https://www.snolab.ca/snoplus/private/DocDB/cgi/ShowDocument?docid=1462), and download the file to see.
   
 * ### Compute Canada Account
+  This account will be one of the most important accounts, since many other accounts require Compute Canada account information.
+  * 
   
 * ### SnoLab Account
