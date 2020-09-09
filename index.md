@@ -11,3 +11,7 @@ def main():
   print("Hello world!")
   return 0
 ```
+
+```bash
+echo "Hello"
+```
