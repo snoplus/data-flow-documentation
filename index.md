@@ -1,5 +1,6 @@
 # Placeholder information
 
+* [Getting Started Guide](./gettingStarted/instruction.md)
 * [Processing](./processing/processing.md)
 * [Production](./production/production.md)
 
