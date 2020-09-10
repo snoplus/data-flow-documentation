@@ -1,4 +1,4 @@
 # Getting Started Guide
 
-* ## [Account](account.md)
-* ## [Tools]
+* ## [Account](./account.md)
+* ## [Tools](./tools.md)
