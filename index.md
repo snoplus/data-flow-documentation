@@ -1,3 +1,9 @@
+---
+layout: default
+title: Home
+nav_order: 1
+---
+
 # Placeholder information
 
 * [Getting Started Guide](./gettingStarted/instruction.md)
