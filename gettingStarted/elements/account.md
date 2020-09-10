@@ -1,3 +1,10 @@
+---
+layout: default
+title: Accounts
+parent: Getting Started
+nav_order: 1
+---
+
 ## Account
 * ### Git Hub
   * Before starting, you should sign up for a git hub account first. Click [here](https://github.com/signup/free) to sign up, if you already have one, please ignore this step.
