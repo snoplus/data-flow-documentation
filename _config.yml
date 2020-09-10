@@ -1,3 +1,26 @@
 remote_theme: pmarsceill/just-the-docs
 title: [Data-flow Documentation]
-description: [This is a compilation of all documentation sources for all things related to processing and production.]
+
+### Aux links - Upper right link on the page ###
+aux_links:
+  "Data-flow Docs on Github":
+  - "//github.com/snoplus/data-flow-documentation"
+
+# Open it in a new tab
+aux_links_new_tab: true
+###############
+
+### Footer ###
+footer_content: "SNO+ Data-flow Documentation"
+
+# Timestamp
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub."
+gh_edit_repository: "https://github.com/snoplus/data-flow-documentation" # the github URL for your repo
+gh_edit_branch: "gh-pages" # the branch that your docs is served from
+gh_edit_view_mode: "edit" # "tree" or "edit" if you want the user to jump into the editor immediately
+###############
