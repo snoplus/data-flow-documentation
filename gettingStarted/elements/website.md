@@ -13,7 +13,7 @@ This page will introduce some useful website you need for processing, production
   There are monitoiring sites you can use to monitor production and processing job status. Some of the websites require GRID certificate and [SNOLAB account](./snolab.md).
   * ### Dirac
     Dirac platform can show status of submited jobs, which can be used for debugging for a particular job.
-    Link: [https://dirac.gridpp.ac. uk:8443/DIRAC/](https://dirac.gridpp.ac. uk:8443/DIRAC/)
+    Link: [https://dirac.gridpp.ac.uk:8443/DIRAC/](https://dirac.gridpp.ac.uk:8443/DIRAC/)
   * ### Internal Websites
     Monitoring for processing:
     [https://couch.snopl.us/data-processing/_design/dproc/index.html](https://couch.snopl.us/data-processing/_design/dproc/index.html)
