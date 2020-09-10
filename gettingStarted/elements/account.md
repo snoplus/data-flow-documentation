@@ -42,3 +42,11 @@ nav_order: 1
 
 * ### SNOLAB
   * To obtain a SNOLAB account, you need your supervisor to follow the instruction [here](https://www.snolab.ca/orbeon/fr/ComputingSupport/NewSNOLABUserAccount/new).
+  
+* ### Illume(IceCube)
+  * To apply for an account on Illume, you can email the administrator(Jamie Rajewski) at jrajewsk@ualberta.ca.
+  * After the account has been approved, you will receive your account and a temporary password, then you can log in to the cluster and change your password using:
+    ```bash
+    ssh <username>@login.illume.systems
+    ```
+  * For specific instructions, see [here](https://sites.google.com/ualberta.ca/illume/home).
