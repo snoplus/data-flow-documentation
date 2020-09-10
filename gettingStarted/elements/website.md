@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Accounts
+title: Website
 parent: Getting Started
 nav_order: 3
 ---
