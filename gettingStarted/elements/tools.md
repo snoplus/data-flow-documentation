@@ -7,6 +7,11 @@ nav_order: 2
 
 ## Tools
 
+* ### GRID Certificate
+  * You would need the certificate to access many websites, for canadaian users, go to [this website](https://cert.gridcanada.ca/cgi-bin/pub/pki?cmd=getStaticPage&name=homePage).
+  * In the Step 2 - **Request a Certificate**, choose **Server Request** and enter "snoplusdata.snolab.ca" as the host name.
+  * For users from other countries, please follow the instructuion [here](https://snopl.us/docs/rat/grid_manual/html/certificates_and_initial_setup.html).
+
 * ### SSH Key
   * To generate ssh key for making connections, please go to `.ssh` directory by entering `cd .ssh/` in your home directory. In case you do not have the directory, you can use `mkdir .ssh` in your home directory.
   * Try `ssh-keygen`, it would ask you to enter the name and the keyphrase(password for the key file).
@@ -17,4 +22,3 @@ nav_order: 2
   * In **IT Services**, choose **Computing Support Page**.
   * In **Work Tools** section, select **VPN - Virtual Private Network**.
   * Then you can choose the version to install according to your Operating System.
-  
