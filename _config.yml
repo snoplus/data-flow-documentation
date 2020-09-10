@@ -20,11 +20,3 @@ gh_edit_repository: "https://github.com/snoplus/data-flow-documentation" # the g
 gh_edit_branch: "gh-pages" # the branch that your docs is served from
 gh_edit_view_mode: "edit" # "tree" or "edit" if you want the user to jump into the editor immediately
 ###############
-
-# Last-modified timestamp
-plugins:
-  - jekyll-last-modified-at
-
-# Optional. The default date format, used if none is specified in the tag.
-last-modified-at:
-    date-format: '%d-%b-%Y'
