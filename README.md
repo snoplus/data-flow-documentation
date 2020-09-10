@@ -44,4 +44,4 @@ echo "Hello World!"
 * [Github Markdown Syntax Guide](https://guides.github.com/features/mastering-markdown/)
 * [Official Github Pages + Jekyll Reference](https://docs.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll)
 * [Jekyll Reference](https://jekyllrb.com/docs/)
-* [Slate Reference (the Jekyll theme we are using)](https://github.com/pages-themes/slate)
+* [just-the-docs Reference (the Jekyll theme we are using)](https://pmarsceill.github.io/just-the-docs/)
