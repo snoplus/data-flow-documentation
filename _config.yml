@@ -13,10 +13,6 @@ aux_links_new_tab: true
 ### Footer ###
 footer_content: "SNO+ Data-flow Documentation"
 
-# Timestamp
-last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
-last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
-
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub."
@@ -24,3 +20,11 @@ gh_edit_repository: "https://github.com/snoplus/data-flow-documentation" # the g
 gh_edit_branch: "gh-pages" # the branch that your docs is served from
 gh_edit_view_mode: "edit" # "tree" or "edit" if you want the user to jump into the editor immediately
 ###############
+
+# Last-modified timestamp
+plugins:
+  - jekyll-last-modified-at
+
+# Optional. The default date format, used if none is specified in the tag.
+last-modified-at:
+    date-format: '%d-%b-%Y'
