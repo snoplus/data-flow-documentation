@@ -8,9 +8,9 @@ nav_order: 3
 
 # Scripts
 
-* dflow_register
-* offsite_transfers
-* move_data
-* buffer1_Screen_Sessions
-* Checking_and_updating_GUIDs
-* Checking_and_updating_GUIDs_by_RAT_version
+* [dflow_register](./dflow_register.md)
+* [offsite_transfers](./offsite_transfer.md)
+* [move_data](./move_data.md)
+* [buffer1_Screen_Sessions](./buffer1_screen_sessions.md)
+* [Checking_and_updating_GUIDs](./checking_and_updating_guids.md)
+* [Checking_and_updating_GUIDs_by_RAT_version](./checking_and_updating_guids_by_rat_ver.md)
