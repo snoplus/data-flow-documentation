@@ -1,7 +1,7 @@
 ---
 layout: default
 title: move_data
-nav_exclue: true
+nav_exclude: true
 ---
 
 ## move_data
