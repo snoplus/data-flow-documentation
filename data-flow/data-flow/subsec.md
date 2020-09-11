@@ -1,3 +1,11 @@
+---
+layout: default
+title: Subsections
+parent: SNO+ data-flow manual
+nav_order: 1
+has_children: true
+---
+
 ## Subsections
 
 * Overview
