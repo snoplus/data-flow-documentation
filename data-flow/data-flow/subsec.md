@@ -8,8 +8,8 @@ has_children: true
 
 ## Subsections
 
-* Overview
-* Buffer1
+* [Overview](./overview.md)
+* [Buffer1](./buffer1.md)
 * Setup & Services
 * Scripts
   * dflow register
