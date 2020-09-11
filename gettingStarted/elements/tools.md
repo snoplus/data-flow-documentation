@@ -8,7 +8,7 @@ nav_order: 2
 ## Tools
 
 * ### GRID Certificate
-  * You would need the certificate to access many websites, for canadaian users, go to [this website](https://cert.gridcanada.ca/cgi-bin/pub/pki?cmd=getStaticPage&name=homePage).
+  * You would need the certificate to access many websites, for Canadaian users, go to [this website](https://cert.gridcanada.ca/cgi-bin/pub/pki?cmd=getStaticPage&name=homePage).
   * In the Step 2 - **Request a Certificate**, choose **Server Request** and enter "snoplusdata.snolab.ca" as the host name.
   * For users from other countries, please follow the instructuion [here](https://snopl.us/docs/rat/grid_manual/html/certificates_and_initial_setup.html).
 
