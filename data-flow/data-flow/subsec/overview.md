@@ -2,6 +2,7 @@
 layout: default
 title: Overview
 parent: Data-flow
+grand_parent: SNO+ data-flow manual
 nav_order: 1
 ---
 
