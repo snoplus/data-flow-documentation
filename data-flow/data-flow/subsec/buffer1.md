@@ -2,7 +2,8 @@
 layout: default
 title: Buffer1
 parent: Data-flow
-nav_order: 1
+grand_parent: SNO+ data-flow manual
+nav_order: 2
 ---
 
 # Buffer1
