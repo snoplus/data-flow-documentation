@@ -42,7 +42,7 @@ nav_order: 1
 
 * ### SNOLAB
   * To obtain a SNOLAB account, you need your supervisor to follow the instruction [here](https://www.snolab.ca/orbeon/fr/ComputingSupport/NewSNOLABUserAccount/new).
-  * Remeber to join mailing lists after receiving your SNOLAB account(see [here](./tools.md) for detail).
+  * Remeber to join mailing lists after receiving your SNOLAB account(see [here](./tools.md#mailing-lists) for detail).
   
 * ### Illume(IceCube)
   * To apply for an account on Illume, you can email the administrator(Jamie Rajewski) at jrajewsk@ualberta.ca.
