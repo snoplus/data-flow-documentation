@@ -32,4 +32,6 @@ nav_order: 2
   There are two way to join the list, feel free to choose the one that you are comfortable with:
   * Click [here](https://www.snolab.ca/sympa/search_list_request) and search the mailing list you want to join.
   * Email sympa@snolab.ca in the following format:
+    ```
     subscribe <lists> <First name> <Last name>
+    ```
