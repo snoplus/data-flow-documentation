@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scipts
+title: Scripts
 parent: Data-flow
 grand_parent: SNO+ data-flow manual
 nav_order: 3
