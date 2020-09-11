@@ -3,6 +3,7 @@ layout: default
 title: Scripts
 parent: Data-flow
 grand_parent: SNO+ data-flow manual
+has_children: true
 nav_order: 3
 ---
 
