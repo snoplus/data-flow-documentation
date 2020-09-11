@@ -1,7 +1,9 @@
 ---
 layout: default
 title: dflow_register
-nav_exclude: true
+parent: Scripts
+grand_parent: Data-flow
+nav_order: 1
 ---
 
 ## dflow_register
