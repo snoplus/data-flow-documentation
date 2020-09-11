@@ -1,3 +1,9 @@
+---
+layout: default
+title: offsite_transfers
+nav_exclude: true
+---
+
 ## offsite_transfers
 
 This script handles replication of raw detector data (L1, L2, LOG) to the grid sites specified in the script itself. First data identified by dflow_register is submitted for transfer from buffer1 to the grid SE designated as the primary site in the script. Then any data that does not have the desired number of replicas is submitted for transfer for any configured sites it does not exist on. The script maintains a maximum number of transfers per data type (L1, L2, LOG) and also submits in batches when possible to minimize overhead.
