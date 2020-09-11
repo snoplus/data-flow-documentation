@@ -9,7 +9,7 @@ nav_order: 3
 # Scripts
 
 * [dflow_register](./dflow_register.md)
-* [offsite_transfers](./offsite_transfer.md)
+* [offsite_transfers](./offsite_transfers.md)
 * [move_data](./move_data.md)
 * [buffer1_Screen_Sessions](./buffer1_screen_sessions.md)
 * [Checking_and_updating_GUIDs](./checking_and_updating_guids.md)
