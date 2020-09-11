@@ -23,3 +23,13 @@ nav_order: 2
   * In **IT Services**, choose **Computing Support Page**.
   * In **Work Tools** section, select **VPN - Virtual Private Network**.
   * Then you can choose the version to install according to your Operating System.
+  
+* ### Mailing lists
+  Once you sign up the snolab account, you can join the mailing list. Two of the most important mailing lists are:
+  * snoplus_vosupport@snolab.ca
+  * snoplusdata@snolab.ca
+  
+  There are two way to join the list, feel free to choose the one that you are comfortable with:
+  * Click [here](https://www.snolab.ca/sympa/search_list_request) and search the mailing list you want to join.
+  * Email sympa@snolab.ca in the following format:
+    subscribe <lists> <First name> <Last name>
