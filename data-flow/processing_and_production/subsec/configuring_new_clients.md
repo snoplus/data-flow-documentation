@@ -31,7 +31,7 @@ A few directories need to be accessible from all nodes:
 * data-flow/env.sh: May need tweaks to match your environment (i.e. cvmfs not mounted).
 
 ### Cron jobs
-Typically need two cron jobs. First, clear out anything older than a week in $TMPDIR once a day. This can be done with a command like `find /home/snoprod/tmp/ -mtime +7 -delete > /dev/null` Second, the grid certificates need to be refreshed every hour. See the instructions [here]() or look at what is on Cedar as an active example.
+Typically need two cron jobs. First, clear out anything older than a week in $TMPDIR once a day. This can be done with a command like `find /home/snoprod/tmp/ -mtime +7 -delete > /dev/null` Second, the grid certificates need to be refreshed every hour. See the instructions [here](add later) or look at what is on Cedar as an active example.
 
 ### Screen Sessions
 Basically the screen sessions just need loops both checking and submitting jobs. Checking can be done at any time, but submitting can only happen at one site. The script [enqueue_command.py](./enqueue_command_py.md) synchronizes submission. For an active example, refer to the setup on Cedar.
