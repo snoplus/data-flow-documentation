@@ -67,5 +67,30 @@ modules_for_run_type = {
     “SMELLIE”: set([“Processing”, “DQCSS”]),
     “AMELLIE”: set([“Processing”, “DQCSS”])
     }
-    ```
+```
 The `processing_information` entries define how each module will be run. The different values are:
+* “type”: either “macro” (run via RAT) or “script” (e.g. a bash script); almost all will be “macro”
+* “level”: one of the job types for processing specified in the following section
+* “path”: relative path within the release to the macro or script
+* “ganga_outputs”: outputs that must be handled by the client, includes DB posts (anything not covered by the main “outputs” field)
+* “outputs”: output types to expect (can be “ratds”, “ntuple”, “soc”, “other_ratds”, “other_ntuple”)
+* “other_suffix”: OPTIONAL - Used to give a suffix to the “other_ntuple,ratds” files.**Needs to match the suffix specified in the RAT macro!**
+* “prerequisites”: name(s) of modules required before this module can run
+* “raw_processor”: does this processor run on raw (zdab) or processed (ROOT) data (true or false)?
+The `modules_for_run_type` entries describe which modules will be added for a given run type (from RUN tables in RATDB).
+
+### Job Types
+
+There are various types of job that can be submitted depending on whether the module is production or processing.
+
+For processing, the job type determines whether subfiles or entire runs are submitted and which inputs the job receives. Processing module types:
+* “sub_run”: Creates one subfile per subjob (submitted separately to batch systems)
+* “run”: Creates one subjob for the entire run. ROOT files are streamed over XrootD and macros must have template parameters to receive file paths.
+* “run_zdab”: Creates one subjob for the entire run. ZDAB files are downloaded prior to execution and macros must have template parameters to receive file paths.
+* “run_root”: Creates one subjob for the entire run. ROOT files are downloaded prior to execution and macros must have template parameters to receive file paths.
+
+For production, the job type specifies the information that must be provided when the module is submitted. Production module types:
+* “run”: Passes -r [runno] to RAT to simulate real run conditions
+* “run_number”: Passes -n [runno] -N [num_ev] to RAT to simulate a number of events under real run conditions
+* “time”: Passes -T to RAT to simulate a rate for a certain amount of time
+* “number”: Passes -N to RAT to simulate a number of events
