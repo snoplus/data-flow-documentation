@@ -61,5 +61,4 @@ cd $HOME/data-flow/gasp
 ganga --config=$HOME/.gangarc_production bin/gasp_client.py --priority -c config/production.cfg -m 120 -s 2 --mononly
 # Enqueue the job submission (also commits local job status changes to couch database)
 python bin/enqueue_command.py  config/production.cfg ADDSITENAMEHERE -- ganga --no-mon --config=$HOME/.gangarc_production bin/gasp_client.py --priority -c config/production.cfg --nomon
-next up previous
 ```
