@@ -13,10 +13,10 @@ All processing and production clients should:
   * .gangarc_production and gangadir_production (production).
   * .gangarc_processing and gangadir_processing (processing).
   * .gangarc and gangadir (user testing).
-  * The gangarc contains a field [Configuration]:gangadir to set the correct gangadir.
+  * The gangarc contains a field [Configuration]: gangadir to set the correct gangadir.
   * Running `ganga –config=$HOME/.gangarc_[xxx]` will select the correct config.
 * The following fields in each .gangarc must be set appropriately:
-  * [Configuration]:gangadir (see entry on gangarc and gangadir).
+  * [Configuration]: gangadir (see entry on gangarc and gangadir).
   * If submitting to a batch system:
     * [Configuration]:Batch (set to LFC, PBS, SLURM, or SGE depending on system, no others supported).
     * Specific Batch settings in [LFC]/[PBS]/[SGE]/[SLURM] (e.g. regex pattern for submission return string to extract job ID).
