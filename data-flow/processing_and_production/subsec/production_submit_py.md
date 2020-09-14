@@ -86,3 +86,24 @@ runs.txt
 Running production_submit.py...
 production_submit.py -L runs.txt jobfile.json
 ```
+### Jobs to be run with real run parameters for specific runs and generate a fixed number of events per run:
+```bash
+{
+"rat_v": "6.4.0",
+"modules" : [
+             {"module": "WaterN16sourceRun", "n_ev":210000, "ev_per_run":35000 "run_numbers": [100151,100152]},
+  ]
+}
+```
+Regardless of the types of jobs to be added, the production system needs to have an entry in `modules/production_information_[version].py` (where [version] is the rat version) for the given module. This entry will also define whether the module requires parameters to replace template strings within the macro file. The [make_production]() section has information on how to update the `modules/production_information_[version].py` file.
+
+It is also possible to add labels to specific modules by adding the label information in the JSON file:
+```bash
+{
+  "rat_v": "5.3.2",
+  "modules" : [
+    {"module": "WaterPmt_Betagammas", "label": "WaterData_paper", "n_ev":985000000, "ev_per_run":290000, "template": {"radius": 7250}},
+    {"module": "WaterPmt_Betagammas", "label": "WaterData_paper", "n_ev":928000000, "ev_per_run":290000, "template": {"radius": 8000}}
+  ]
+}
+```
