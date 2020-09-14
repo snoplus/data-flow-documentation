@@ -95,7 +95,7 @@ production_submit.py -L runs.txt jobfile.json
   ]
 }
 ```
-Regardless of the types of jobs to be added, the production system needs to have an entry in `modules/production_information_[version].py` (where [version] is the rat version) for the given module. This entry will also define whether the module requires parameters to replace template strings within the macro file. The [make_production]() section has information on how to update the `modules/production_information_[version].py` file.
+Regardless of the types of jobs to be added, the production system needs to have an entry in `modules/production_information_[version].py` (where [version] is the rat version) for the given module. This entry will also define whether the module requires parameters to replace template strings within the macro file. The [make_production](./misc_make_production.md) section has information on how to update the `modules/production_information_[version].py` file.
 
 It is also possible to add labels to specific modules by adding the label information in the JSON file:
 ```bash
