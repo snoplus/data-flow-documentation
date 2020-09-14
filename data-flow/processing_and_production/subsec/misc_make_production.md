@@ -26,9 +26,9 @@ production_modules = {
 }
 ```
 Where fields are:
-* event_mode: either `time', `number', or `run`
+* event_mode: either `time`, `number`, or `run`
 * path: relative path to macro within the fixed release of RAT
-* outputs: list of outputs (skimmed from the types of output processors included in the file) - typically `ntuple', `ratds', `other_ntuple', `other_ratds'
+* outputs: list of outputs (skimmed from the types of output processors included in the file) - typically `ntuple`, `ratds`, `other_ntuple`, `other_ratds`
 * other_suffix: OPTIONAL - OPTIONAL - Used to give a suffix to the “other_ntuple,ratds” files. **Needs to match the suffix specified in the RAT macro!**
 * template: list (can be empty) of template strings (of format ${field}) within the macro
 The file generated needs to be added to the git repository, but first should be checked to ensure all options are set as desired. For example, some new macros (especially if they do not use a generator with a rate, e.g. the solar neutrino macros or N16) may not have the event_mode set correctly.
