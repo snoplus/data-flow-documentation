@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Scripts
-parent: Processing & Production
+parent: Monitoring
 grand_parent: SNO+ data-flow manual
 nav_order: 2
 ---
