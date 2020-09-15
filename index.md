@@ -7,6 +7,7 @@ nav_order: 1
 # Placeholder information
 
 * [Getting Started Guide](./gettingStarted/instruction.md)
+* [SNO+ Manual](./data-flow/content.md)
 * [Processing](./processing/processing.md)
 * [Production](./production/production.md)
 
