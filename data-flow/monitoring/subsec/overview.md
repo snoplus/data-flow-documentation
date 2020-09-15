@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Overview
-parent: Processing & Production
+parent: Monitoring
 grand_parent: SNO+ data-flow manual
 nav_order: 1
 ---
