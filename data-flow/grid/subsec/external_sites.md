@@ -1,6 +1,6 @@
 ---
 layout: default
-title: EXternal documentation and information sites
+title: External documentation and information sites
 parent: Grid
 grand_parent: SNO+ data-flow manual
 nav_order: 8
