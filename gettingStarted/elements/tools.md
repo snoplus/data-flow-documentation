@@ -11,6 +11,8 @@ nav_order: 2
   * You would need the certificate to access many websites, for Canadaian users, go to [this website](https://cert.gridcanada.ca/cgi-bin/pub/pki?cmd=getStaticPage&name=homePage).
   * In the Step 2 - **Request a Certificate**, choose **User Request** and enter "snoplusdata.snolab.ca" as the host name.
   * For users from other countries, please follow the instructuion [here](https://snopl.us/docs/rat/grid_manual/html/certificates_and_initial_setup.html).
+  * After receiving the request, you can download it and import it into the browser you will use.
+  * Finally, you need to [apply to join the SNO+ virtual organisation (VO)](https://voms.gridpp.ac.uk:8443/voms/snoplus.snolab.ca). **Remember to use the browser with an imported certificate.**
 
 * ### SSH Key
   * To generate ssh key for making connections, please go to `.ssh` directory by entering `cd .ssh/` in your home directory. In case you do not have the directory, you can use `mkdir .ssh` in your home directory.
