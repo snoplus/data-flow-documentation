@@ -208,4 +208,9 @@ GridPP → Navigate to [https://ggus.eu/](https://ggus.eu/) within a browser con
   Follow the guide provided here (similar steps can be taken for user suspensions):
 https://www.snolab.ca/snoplus/private/DocDB/0052/005281/001/2018.08.06_voms_KEG.pdf
 
-* ## Problem:
+* ## Problem: How do I move a file from my local machine to cedar.
+
+  **Solution:**
+  Go to your `.ssh` directory, try
+  ```bash
+  scp -i <ssh key file> <file path> snoprod@cedar.computecanada.ca:<destination path>
