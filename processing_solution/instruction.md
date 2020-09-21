@@ -214,3 +214,9 @@ https://www.snolab.ca/snoplus/private/DocDB/0052/005281/001/2018.08.06_voms_KEG.
   Go to your `.ssh` directory, try
   ```bash
   scp -i <ssh key file> <file path> snoprod@cedar.computecanada.ca:<destination path>
+
+* ## Problem: Mixing ntuple and ratds path in the output files.
+
+  **Solution:**
+  If you do not have many jobs that need to be fixed, you can go to the job document on CouchDB and manually correct it by hand. In the ntuple output file, you need to add `.ntuple` in the specific subrun; in the ratds output file, you should remove `.ntuple` there. For the specific format, you can look at the path of other subrun.
+  If there are other jobs, consider to use the script `fix_ntuple_ratds_production.py` in `gasp/validation`
