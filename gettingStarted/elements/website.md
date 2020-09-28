@@ -21,7 +21,7 @@ This page will introduce some useful website you need for processing, production
     [https://couch.snopl.us/data-production/_design/dproc/index.html](https://couch.snopl.us/data-production/_design/dproc/index.html)
     In these two websites, you can use **Search** under **Users** in the navigation panel for searching a particular kind of jobs.
   * ### Granfana
-    [https://monit-grafana.cern.ch/login](https://monit-grafana.cern.ch/login)
+    You need to use guset login. [https://monit-grafana.cern.ch/login](https://monit-grafana.cern.ch/login)
   * ### GGUS
     [https://ggus.eu/](https://ggus.eu/)
 
