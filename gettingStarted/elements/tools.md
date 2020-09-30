@@ -7,6 +7,8 @@ nav_order: 2
 
 ## **Tools**
 
+---
+
 ### **GRID Certificate**
 You will need a GRID certificate to access many websites and resources within SNO+. The certificate **MUST** be installed in the browser that you will use to view such resources. 
 
