@@ -4,11 +4,11 @@ title: Contact List
 nav_order: 6
 ---
 
-# SNO+ Communication List
+# SNO+ Contact List
 
 Compute Canada Support
 
-General issues/inquiries/requests regarding Compute Canada resources like **Cedar**
+General issues/inquiries/requests regarding Compute Canada resources like **Cedar** and our primary storage site, **snopse1**
 
 support@computecanada.ca
 
