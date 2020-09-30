@@ -6,6 +6,9 @@ nav_order: 1
 ---
 
 ## **Accounts**
+
+---
+
 ### **GitHub**
 * Before starting, you should sign up for a GitHub account first. Click [here](https://github.com/signup/free) to sign up; if you already have one, please ignore this step.
 * To gain access to the SNO+ organization, email snopluscode@snolab.ca and include your GitHub username, your full name and institution.
