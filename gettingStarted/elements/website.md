@@ -60,5 +60,5 @@ DocDB is a database of collaboration presentations, documents, slideshows, and o
 #### **Issues & Solutions from Data-Flow Shift Reports**
 * [The 3 most recent Data-Flow shift reports](https://www.snolab.ca/snoplus/TWiki/bin/view/DAQ/DataFlowReport)
 * [All Data-Flow shift reports (since September 2015)](https://www.snolab.ca/snoplus/TWiki/bin/view/DAQ/ListOfAllDataFlowReports)
-* [A list of common shifting issues and solutions](https://docs.google.com/document/d/1X2qN9gydYQPfgmMd4-enCFUaqKKAuhfRwoMfkIjp-go/edit)
+* [A list of common shifting issues and solutions](../../processing_solution/instruction.md)
 
