@@ -1,11 +1,48 @@
 ---
 layout: default
-title: Communication List
+title: Contact List
 nav_order: 6
 ---
 
 # SNO+ Communication List
 
-* Erming Pei erming.pei@computecanada.ca
+Compute Canada Support
 
-*  Lixin Liu liu@sfu.edu
+General issues/inquiries/requests regarding Compute Canada resources like **Cedar**
+
+support@computecanada.ca
+
+[Refer to the following before sending your request](https://docs.computecanada.ca/wiki/Technical_support)
+
+---
+
+Erming Pei
+
+SNO+ Compute Canada Liason
+
+erming.pei@computecanada.ca
+
+---
+
+Lixin Liu
+
+Cedar Admin/**Certificate Authority**
+
+liu@sfu.edu
+
+---
+
+GGUS Helpdesk
+
+General issues/inquiries/requests regarding **RAL** and **CVMFS**
+
+https://ggus.eu/index.php?mode=ticket_submit
+
+---
+
+dCache Admin
+
+Issues with Fermilab (**FNAL**) transfers/storage
+
+dcache-admin@fnal.gov
+
