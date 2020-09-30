@@ -6,7 +6,9 @@ nav_order: 6
 
 # SNO+ Contact List
 
-Compute Canada Support
+---
+
+**Compute Canada Support**
 
 General issues/inquiries/requests regarding Compute Canada resources like **Cedar** and our primary storage site, **snopse1**
 
@@ -16,7 +18,7 @@ support@computecanada.ca
 
 ---
 
-Erming Pei
+**Erming Pei**
 
 SNO+ Compute Canada Liason
 
@@ -24,7 +26,7 @@ erming.pei@computecanada.ca
 
 ---
 
-Lixin Liu
+**Lixin Liu**
 
 Cedar Admin/**Certificate Authority**
 
@@ -32,7 +34,7 @@ liu@sfu.edu
 
 ---
 
-GGUS Helpdesk
+**GGUS Helpdesk**
 
 General issues/inquiries/requests regarding **RAL** and **CVMFS**
 
@@ -40,7 +42,7 @@ https://ggus.eu/index.php?mode=ticket_submit
 
 ---
 
-dCache Admin
+**dCache Admin**
 
 Issues with Fermilab (**FNAL**) transfers/storage
 
