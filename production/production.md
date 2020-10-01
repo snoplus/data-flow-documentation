@@ -12,6 +12,7 @@ This is a high-level overview of the steps that it takes to produce Monte Carlo 
 
 ---
 
+## **Monte Carlo Production**
 1. Collaboration decides on important Monte Carlo dataset to generate (in the form of a **Production Request**)
 2. The Production Request, available [here](https://snopl.us/production/production-request), will inform:
   * What **macros** (also known as **modules**) need to be run, which in turn decides the **event mode**
@@ -29,7 +30,7 @@ This is a high-level overview of the steps that it takes to produce Monte Carlo 
 ---
 
 
-## **Visualization of the Processing chain**
+## **Visualization of the Production chain**
 
 
 ![production chain image](../assets/images/production-flow.png)
