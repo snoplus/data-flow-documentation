@@ -4,22 +4,8 @@ title: Home
 nav_order: 1
 ---
 
-# Placeholder information
+# **Welcome to the Data-flow Documentation**
 
-* [Getting Started Guide](./gettingStarted/instruction.md)
-* [SNO+ Manual](./data-flow/contents.md)
-* [Processing](./processing/processing.md)
-* [Production](./production/production.md)
+Here, you will find all of our primary sources of documentation, including explanations of how processing and production work, the data-flow code manual, and much more. Please use the links in the sidebar to navigate, or try searching in the bar at the top of the page.
 
-## Example: Adding inline Python code:
-
-```python
-# Python with syntax highlighting
-def main():
-  print("Hello world!")
-  return 0
-```
-
-```bash
-echo "Hello"
-```
+If you notice anything outdated, feel free to update the page by clicking the **Edit this page** link in the footer of the page, which will bring you right to the GitHub editor.
