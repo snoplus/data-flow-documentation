@@ -40,4 +40,6 @@ If it is decided that a certain set of runs is unusable for analysis (ex. mistak
 
 ---
 
+## **Visualization of the Processing chain**
+![processing chain image](/assets/images/processing-flow.png)
 
