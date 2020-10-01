@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Grid
-parent: SNO+ data-flow manual
+parent: SNO+ Data-Flow Manual
 nav_order: 5
 has_children: true
 has_toc: true
