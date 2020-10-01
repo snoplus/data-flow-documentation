@@ -1,11 +1,11 @@
 ---
 layout: default
-title: SNO+ processing solution guide
-nav_order: 5
+title: SNO+ Issues & Solutions Guide
+nav_order: 6
 has_children: false
 ---
 
-# SNO+ Processing - Issues and Solutions Guide
+# SNO+ Processing - Issues & Solutions Guide
 
 This is a compilation of issues and solutions that processing shifters have encountered. Please add an entry to this document if you’ve encountered a problem that does not have a documented solution (or an easily available solution).
 
