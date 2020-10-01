@@ -247,3 +247,19 @@ If there are other jobs, consider to use the script `fix_ntuple_ratds_production
 
 **Solution:**
 Delete either one of the job documents of **BOTH** modules in CouchDB, remember to delete the Analysis40 one first.
+
+---
+
+## **The screen is showing "unchanged from completed"**
+This can happen if duplicate `gasp_client`'s are/were running on Cedar, a job got submitted by both, but then it finished on one (and the other can't figure out why the status is completed, but the job is still running).
+
+**Solution:**
+Reset the Ganga cache and registry:
+1. Drain the queue on the site, and shutdown the `gasp_client`
+2. Delete all files in the `gangadir` defined in the `.gangarc` for the site (ex. `gangadir = $HOME/gangadir_slurm_processing` for cedar processing)
+3. Clean out the `jobdir` as well as `$TMP` for the site
+4. Restart the `gasp_client`
+
+**NOTES**
+1. Caveat for Cedar - Processing and Production share a `$TMP` and `jobdir` so **DON'T** clean those out if you're not resetting both Ganga's
+2. If no jobs are running, draining the queue may not be necessary so skip that step and shut down the client, and continue
