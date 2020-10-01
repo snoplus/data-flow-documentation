@@ -214,7 +214,7 @@ Copy this and then change the appropriate fields with the new name or informatio
 
 ---
 
-## How do I extend VOMs memberships?
+## **How do I extend VOMs memberships?**
 Received an email from "VOMS Admin for VO snoplus.snolab.ca" <j.r.wilson@qmul.ac.uk> with the subject [VOMS Admin] Membership expiration notice for VO snoplus.snolab.ca. 
 Emails received from this address could also be “User suspension notification”
 
