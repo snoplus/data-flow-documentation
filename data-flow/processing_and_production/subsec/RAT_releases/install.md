@@ -6,6 +6,14 @@ nav_exclude: true
 
 ## Installing tagged software on CVFMS
 
+Usually, we only release new versions of RAT on CVMFS (which is Juan Pablo Yanez' job) and not much else, but if you find that you would like to share your tool to CVMFS, follow one of the guides below.
+
+### **NEW, EASIER METHOD (As of 2020) - cvmfs-pusher Docker Container**
+
+A new tool, located on the SNO+ GitHub [here](https://github.com/snoplus/cvmfs-pusher), is a pre-configured Docker container set up to walk you through the steps of building and pushing a new RAT release. Although it is designed for RAT, one can look at the script and see the relevant parts for simply getting software pushed to CVMFS (while referencing the below guide). The documentation on the page and the bash script should be sufficient for walking you through it, but if you have questions, please consult **Jamie Rajewski (jrajewsk@ualberta.ca)**.
+
+### **OLD, DIFFICULT AND TIME-CONSUMING METHOD - Using a Virtual Machine**
+
 For older documentation which contains more information, see here: [DocDB 2528](https://www.snolab.ca/snoplus/private/DocDB/cgi/ShowDocument?docid=2528).
 
 Requirements:

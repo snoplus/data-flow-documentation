@@ -1,10 +1,10 @@
 ---
 layout: default
-title: misc/make_production
+title: make_production
 nav_exclude: true
 ---
 
-## misc/make_production
+## make_production
 
 This script is used whenever there is a new release of RAT and production modules need to be run. The new version uploads the new information file to couchDB, which you can find in data-processing, under proddata, in the production_information view.
 

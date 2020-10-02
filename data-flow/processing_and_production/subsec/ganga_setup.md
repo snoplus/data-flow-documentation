@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Ganga setup
+title: Ganga Setup
 parent: Processing & Production
-grand_parent: SNO+ data-flow manual
+grand_parent: SNO+ Data-Flow Manual
 nav_order: 5
 ---
 
