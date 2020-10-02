@@ -2,7 +2,7 @@
 layout: default
 title: Overview
 parent: Grid
-grand_parent: SNO+ data-flow manual
+grand_parent: SNO+ Data-Flow Manual
 nav_order: 1
 ---
 

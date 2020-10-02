@@ -48,3 +48,19 @@ Issues with Fermilab (**FNAL**) transfers/storage
 
 dcache-admin@fnal.gov
 
+---
+
+**Yujun Wu**
+
+Specific contact for Fermilab
+
+yujun@fnal.gov
+
+---
+
+**John Bland**
+
+Issues with Liverpool site
+
+jbland@hep.ph.liv.ac.uk
+
