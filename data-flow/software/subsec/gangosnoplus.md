@@ -2,7 +2,7 @@
 layout: default
 title: GangaSNOplus
 parent: Software
-grand_parent: SNO+ data-flow manual
+grand_parent: SNO+ Data-Flow Manual
 nav_order: 2
 ---
 
@@ -24,7 +24,5 @@ The plugin directory structure is organised as follows:
 * GangaSNOplus/GASP.ini: a default initialisation file that should be set as the GANGA_CONFIG_PATH environment variable, this sets up defaults required by the GangaSNOplus modules.
 
 ### RATProd
-
-
 
 RATProd is the application used for all production and processing jobs. There is a corresponding RTRATProd module that contains RTHandlers for submission to the various backends. The ratProdRunner.py script runs on the backend, which is able to run either a rat job or a script (having first setup an environment that includes SNO+ software). If running a RAT job, once it is complete the script will check output data (using a list of expected files set at submission time) to verify their contents; this information is passed back to the submission client via the job output sandbox. Specified output files are then uploaded to storage, with a local grid SE used and RAL as a failover. 
