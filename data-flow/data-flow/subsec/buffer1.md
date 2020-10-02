@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Buffer1
+title: buffer1
 parent: Data-flow
-grand_parent: SNO+ data-flow manual
+grand_parent: SNO+ Data-Flow Manual
 nav_order: 2
 ---
 

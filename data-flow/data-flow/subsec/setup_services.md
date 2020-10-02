@@ -2,7 +2,7 @@
 layout: default
 title: Setup & Services
 parent: Data-flow
-grand_parent: SNO+ data-flow manual
+grand_parent: SNO+ Data-Flow Manual
 nav_order: 3
 ---
 
@@ -44,7 +44,11 @@ sudo /etc/init.d/globus-gridftp-server restart
 ```
 
 ## Current Expiration:
-The current certificate was installed on June 7, 2019 and will expire on July 6, 2020.
+The certificates were both installed **June 16 2020** and will expire on **July 16 2021**
+
+The **user** certificate is under Carsten CN and exists on both cedar and buffer1 under the `~/.globus` directory
+
+The **host** certificate exists only on buffer1 under the `/etc/grid-security/` directory
 
 ## Updating the gridmap-file:
 In the event that the production certificate was updated with a new DN (new username), a gridmap-file needs to be updated in order to push files from buffer1 to the FTS. This file exists under `/etc/grid-security/grid-mapfile` on buffer1 and can be automatically updated via:
