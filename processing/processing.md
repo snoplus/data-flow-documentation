@@ -32,7 +32,7 @@ This is a high-level overview of the steps that data takes to be processed, star
 
 ---
 
-## **Reporocessing**
+## **Reprocessing**
 If it is decided that a certain set of runs is unusable for analysis (ex. mistaken RAT version) then the runs **must** be reprocessed with a new version of RAT.
 
 1. Instead of automatic processing, run `offline_processing.py` **on the command line** (NO screen) with the desired RAT version, run(s), and module(s)
