@@ -291,3 +291,21 @@ export MYPROXY_SERVER=myproxy.cern.ch
 ```
 The reason this works is because the BDII is a database index which contains the correct storage locations; the RAL one seems to incorrectly have the port set to 80, hence why changing to the CERN one fixes it.
 
+---
+
+## **How do I cancel transfers on buffer1?**
+
+**Solution:**
+Sometimes transfers from buffer1 can have issues, and changes may need to be made to offsite_transfers to reduce the number of connections. After doing this, you can either wait for the current transfers to all fail after being checked, or to expedite the process, you can manually cancel them by doing the following:
+
+1. Navigate to [this CouchDB view](https://couch.snopl.us/_utils/#/database/data-processing/_design/dflow/_view/raw_data_transfers) to see current ongoing transfers
+2. Notice that many of the same document ID may be visible - this is due to it listing each subrun individually, which all may be within the same document consisting of the whole run
+3. Navigate into a document, and look through the subruns until you find one with a `transfer` section. In this section will be an `id` field - copy that ID
+4. On buffer1, run the following command:
+```bash
+fts-transfer-cancel --proxy /home/snotflow/grid/proxy/production_proxy -s https://lcgfts3.gridpp.rl.ac.uk:8446 [TRANSFER_ID]
+```
+where [TRANSFER_ID] is the ID you previously copied. It should say "CANCELLED" indicating success
+5. Repeat these steps for each unique ID in the document(s)
+
+
