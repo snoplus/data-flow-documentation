@@ -14,7 +14,7 @@ This is a high-level overview of the steps that data takes to be processed, star
 
 ## **Raw Data**
 1. The detector takes data at SNOLAB
-2. This data is processed immediately **onsite** (which is now referred to as **L1 data**) to create the required **run tables** (tables containing the information about the state of the detector at the time of data retrieval) for the rest of the processing chain
+2. This data is used to create the required **run tables** (tables containing the information about the state of the detector at the time of data retrieval) for the rest of the processing chain
 3. A machine at SNOLAB called **buffer1** runs screen sessions of `dflow_register.py` and `offsite_transfers.py` to create documents for the raw data in CouchDB and register them to the grid, and then transfer them to the primary site (at the time of writing, this is **SFU**)
 4. Once this L1 data is ready to be processed (using the **second pass processing macro** which is commonly called the **processing module**), `offline_processing.py` will create job documents for the runs that are ready and mark those jobs as "waiting"
 5. The `gasp_client.py` also runs in a screen session infinitely (the **enqueue_processing** screen tab) and it does the following:
