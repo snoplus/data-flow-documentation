@@ -263,3 +263,31 @@ Reset the Ganga cache and registry:
 **NOTES**
 1. Caveat for Cedar - Processing and Production share a `$TMP` and `jobdir` so **DON'T** clean those out if you're not resetting both Ganga's
 2. If no jobs are running, draining the queue may not be necessary so skip that step and shut down the client, and continue
+
+---
+
+## **CGSI-gSOAP running on buffer1.sp.snolab.ca reports could not open connection to lcg-snopse1.sfu.computecanada.ca:80**
+
+A full example of the error:
+```
+Error:  ['gfal-sum error: 70 (Communication error on send) - srm-ifce err: Communication error on send, err: [SE][Ls][] httpg://lcg-snopse1.sfu.computecanada.ca/srm/managerv2: CGSI-gSOAP running on buffer1.sp.snolab.ca reports could not open connection to lcg-snopse1.sfu.computecanada.ca:80', '', '']
+```
+This is what we call the "**port 80 issue**" and can be identified when the **SE** URL contains **:80** at the end (as this one does). That is the incorrect port, so things will certainly fail.
+
+**Solution:**
+Change the BDII to the CERN one. This can be done by editing the **.bashrc** (located in `~/.bashrc`) on **buffer1**. If you open the file, you will see some lines like this:
+```bash
+#export LCG_GFAL_INFOSYS=lcg-bdii.cern.ch:2170
+export LCG_GFAL_INFOSYS=lcgbdii.gridpp.rl.ac.uk:2170
+export MYPROXY_SERVER=myproxy.gridpp.rl.ac.uk
+#export MYPROXY_SERVER=myproxy.cern.ch
+```
+Change them so that the **gridpp** ones are **commented out** and then **uncomment** the **CERN** ones like so:
+```bash
+export LCG_GFAL_INFOSYS=lcg-bdii.cern.ch:2170
+#export LCG_GFAL_INFOSYS=lcgbdii.gridpp.rl.ac.uk:2170
+#export MYPROXY_SERVER=myproxy.gridpp.rl.ac.uk
+export MYPROXY_SERVER=myproxy.cern.ch
+```
+The reason this works is because the BDII is a database index which contains the correct storage locations; the RAL one seems to incorrectly have the port set to 80, hence why changing to the CERN one fixes it.
+
