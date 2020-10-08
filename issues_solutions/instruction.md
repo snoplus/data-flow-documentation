@@ -308,4 +308,10 @@ fts-transfer-cancel --proxy /home/snotflow/grid/proxy/production_proxy -s https:
 where [TRANSFER_ID] is the ID you previously copied. It should say "CANCELLED" indicating success
 5. Repeat these steps for each unique ID in the document(s)
 
+---
+
+## **Nothing in CouchDB is loading in any of the views**
+
+**Solution:**
+This usually happens if you leave couch open in a tab for too long. Close the tab and open a new one, and couch should start working again.
 
