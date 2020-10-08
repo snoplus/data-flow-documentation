@@ -313,5 +313,14 @@ where [TRANSFER_ID] is the ID you previously copied. It should say "CANCELLED" i
 ## **Nothing in CouchDB is loading in any of the views**
 
 **Solution:**
+
 This usually happens if you leave couch open in a tab for too long. Close the tab and open a new one, and couch should start working again.
+
+---
+
+## **Where do the gasp monitoring pages get their information on job status?**
+
+**Solution:**
+
+[This is the view](https://couch.snopl.us/_utils/#/database/data-production/_design/dproc/_view/job_passes_by_status_module_reduce) for **production** and [this is the view](https://couch.snopl.us/_utils/#/database/data-processing/_design/dproc/_view/job_passes_by_status_module_reduce) for **processing**. To see the totals for each status, go into **Options** in the **top right** of the page, click **Reduce**, then change the **Group Level** to **1**. If you want to see the statuses broken up by module, change the **Group Level** to **2**.
 
