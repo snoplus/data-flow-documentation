@@ -324,3 +324,19 @@ This usually happens if you leave couch open in a tab for too long. Close the ta
 
 [This is the view](https://couch.snopl.us/_utils/#/database/data-production/_design/dproc/_view/job_passes_by_status_module_reduce) for **production** and [this is the view](https://couch.snopl.us/_utils/#/database/data-processing/_design/dproc/_view/job_passes_by_status_module_reduce) for **processing**. To see the totals for each status, go into **Options** in the **top right** of the page, click **Reduce**, then change the **Group Level** to **1**. If you want to see the statuses broken up by module, change the **Group Level** to **2**.
 
+---
+
+## **There are jobs waiting, but nothing is being picked up on Dirac or Cedar!**
+
+**Solution:**
+
+This is a pretty general issue and could be caused by many things, but some common fixes to try:
+
+1. Ensure that the correct type of job is set in the **launch_processing.sh** script (there are variables at the top for processing and production, ensure the appropriate ones are set for the type you want to run). This is usually only an issue on Dirac as Cedar is set to run both types always.
+
+2. Reset the screens on Cedar and Liverpool - just kill them, and rerun **launch_processing.sh**. Attach to the screens and watch what happens; you can tell this fixed it as **enqueue_production** / **enqueue_processing** (whichever you are trying to run) should show it as submitting and running jobs.
+
+3. Make sure transfers on buffer1 are working - this can quickly be verified by looking at Grafana and ensuring all 3 sites show high transfer efficiency; however, you should also check the screens running on buffer1 as well just to ensure there are no errors popping up. If the raw data can't get out of SNOLAB, it can't be used to fulfill the prerequisites for processing (and likewise, run-by-run production also won't have the runs appropriate to simulate off of).
+
+If all of this fails, consult Jamie Rajewski (jrajewsk@ualberta.ca) or Richella Li (jl26@ualberta.ca).
+
