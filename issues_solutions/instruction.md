@@ -340,3 +340,25 @@ This is a pretty general issue and could be caused by many things, but some comm
 
 If all of this fails, consult Jamie Rajewski (jrajewsk@ualberta.ca) or Richella Li (jl26@ualberta.ca).
 
+---
+
+## **The power went out at SNOLAB and weird things are happening with CouchDB - what should I do?**
+
+**Solution:**
+
+Couch replicates to another instance above ground, and if the power goes down underground, this replication will halt. If the screen sessions weren't stopped prior to the outage, weird things will begin to happen. The replications pending will probably go up significantly during the outage, which one can [view here](https://snopl.us/network/dbstatus). If the power returns and the replications pending don't go down (they should be around 0 if things are working) please email the networking group at snoplusnetwork@googlegroups.com to let them know that the couch processes may need to be restarted on the systems.
+
+---
+
+## **How should data-flow be updated on our sites?**
+
+**Solution:**
+
+The git workflow for data-flow is the following:
+
+1. **Never** change any of the master branches except with a Github merge
+2. Only run `git checkout master` and `git pull origin master` on the sites, to update them
+
+These two steps will keep our master clean and avoid git issues from making local changes/commits (which will result in a divergance).
+
+
