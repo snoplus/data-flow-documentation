@@ -11,23 +11,23 @@ New production clients will need access to Ganga (via CVMFS) and a dirac_ui if s
 ### Software needed
 * gridui: Accessible via /cvmfs/grid.cern.ch
 * ganga: Accessible via /cvmfs/ganga.cern.ch
-* data-flow: Accessible via git hub
+* data-flow: Accessible via github
   * Needs pip install to generate libraries
   * Can also scp the data-flow/lib director from Cedar
-* data-flow/gasp/sites/[sitename].py: This will define the qualities of the site, including the name, the number of jobs and the RAT versions.
 
 ### Configure files needed
-* /.gangarc: Configure to your local batch system and directory structure be sure RUNTIME_PATH points to your ganga install.
-* /.gangasnoplus: Contains ratdb passwords. May be deprecated.
+* .gangarc: Configure to your local batch system and directory structure be sure RUNTIME_PATH points to your ganga install.
+  * Typically, the `.gangarc` is a default one - we have two customized ones on each site (for processing and production) usually labelled as `.gangarc_[backend]_[processing|production]` - copy the ones from Cedar or another site as a reference
+* .gangasnoplus: Contains ratdb passwords. May be deprecated.
 * data-flow/gasp/config/[sitename].cfg: Make sure this is passed to gasp_client. This contains information about the passwords to access databases.
 * data-flow/gasp/sites/[sitename].py: This will define the qualities of the site, including the name, the number of jobs and the RAT versions.
 
 ### Environment
 A few directories need to be accessible from all nodes:
-* ganga_jobs: Path set in postexecute and preexecute in .gangarc.
+* ganga_jobs: Path set in postexecute and preexecute in the corresponding .gangarc (processing and production).
 * gangadir: Ganga information directories, the path is set in .gangarc.
 * $TMPDIR: Set in an environment file.
-* Grid Certificate: Need a valid grid certificate referenced by $X509_USER_PROXY.
+* Valid Grid Certificate: Stored in `.globus` (should probably just copy the `.globus` from Cedar) - referenced by `$X509_USER_PROXY`
 * data-flow/env.sh: May need tweaks to match your environment (i.e. cvmfs not mounted).
 
 ### Cron jobs
