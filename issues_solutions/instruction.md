@@ -361,4 +361,12 @@ The git workflow for data-flow is the following:
 
 These two steps will keep our master clean and avoid git issues from making local changes/commits (which will result in a divergance).
 
+---
+
+## **Transfer efficiency is very low in Grafana, and buffer1 reports "SSL Connection" / "403 Forbidden" Errors**
+
+**Solution:**
+
+This means that there is an issue with the **File Transfer Service** (FTS), which is provided to us by RAL. There isn't anything we can do from our side, and this is a serious issue, so submit a ticket through GGUS specifying GridPP RAL and ensure you set the priority of the ticket to **top priority**.
+
 
