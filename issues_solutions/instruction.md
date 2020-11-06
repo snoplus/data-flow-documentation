@@ -369,4 +369,12 @@ These two steps will keep our master clean and avoid git issues from making loca
 
 This means that there is an issue with the **File Transfer Service** (FTS), which is provided to us by RAL. There isn't anything we can do from our side, and this is a serious issue, so submit a ticket through GGUS specifying GridPP RAL and ensure you set the priority of the ticket to **top priority**.
 
+---
 
+## **How to make jobs with a specific rat version running on a site?**
+
+**Solution:**
+
+* cd to the directory here, `~/data-flow/gasp/sites`, choose the site file you want. `XX_XX_processing.py` is for processing and `XX_XX_production.py` is for   production.
+* Include the rat version you want in `rat_locations`
+* If you don't want the jobs running on other sites, remember to comment out this rat version in the site file of other sites.
