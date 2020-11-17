@@ -6,7 +6,13 @@ nav_exclude: true
 
 ## delete_jobs.py
 
-This script is to delete datasets from the grid that are no longer needed for analysis. It will delete the files from the storage element, remove the lfc, up date the job document to reflect the deletion and delete the data document from the database. 
+This script is to delete datasets from the grid that are no longer needed for analysis. It will:
+1. Perform the query and filtering to find matches in the database
+2. Delete the files from the storage element
+3. Delete the data document from the database
+4. Update the job document to reflect the deletion
+
+Because this script is deleting from the grid, it **requires a valid proxy** - ensure you have run `grid_production` prior to running!
 
 An enhancement was added to perform the grid deletion much faster by utilizing concurrency - see the arguments list below for how to effectively use it.
 
