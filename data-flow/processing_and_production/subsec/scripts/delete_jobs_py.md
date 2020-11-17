@@ -10,6 +10,22 @@ This script is to delete datasets from the grid that are no longer needed for an
 
 An enhancement was added to perform the grid deletion much faster by utilizing concurrency - see the arguments list below for how to effectively use it.
 
+### Logs and Output
+
+The `-o output_file` option was removed, as the new version of this tool generates its own logs for each stage. The logs are as follows:
+1. `TO_DELETE_GRID.log` - srm, filesize
+2. `TO_DELETE_DATA_DOCS.log` - dataDocID
+3. `TO_MODIFY_JOB_DOCS.log` - jobDocID, pass, subrun
+
+In addition to these, there are an additional 3 logs that contain entries that failed to be deleted/modified. These will only be created if there are entries that failed:
+1. `FAILED_DELETE_GRID.log` - srm, filesize
+2. `FAILED_DELETE_DATA_DOCS.log` - dataDocID
+3. `FAILED_MODIFY_JOB_DOCS.log` - jobDocID, pass, subrun
+
+**NOTE** - These 6 logs are **overwritten** when performing a new deletion. In order to keep track of what you just deleted, please move the generated logs somewhere safe prior to running any additional deletions!
+
+Finally, `DELETED_SIZES.log` contains the total deleted size. This value is also printed at the end of the deletion, but it can be easy to lose track of (especially if doing multiple deletions) so it is added to a file.
+
 You can give it a list in a file that contains the module and rat version separated by a comma, or you can enter the module and rat version in line. You can only enter a list or a module/rat version not both. An example of a list file:
 ```bash
 Processing,6.16.1
