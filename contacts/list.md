@@ -64,3 +64,9 @@ Issues with Liverpool site
 
 jbland@hep.ph.liv.ac.uk
 
+---
+
+**SNO+ Data Manager**
+
+snoplus.data.manager@snolab.ca
+
