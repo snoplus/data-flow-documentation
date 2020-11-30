@@ -11,11 +11,11 @@ New production clients will need access to Ganga (**no logner available via CVMF
 ### Software needed
 * gridui: Accessible via /cvmfs/grid.cern.ch
 * ganga: Create a virtual environment for python 2.7 by running the following:
- - Run `virtualenv ganga-7.1.9` in the home directory
- - Run `source ganga-7.1.9/bin/activate` to enable the virtual python installation
- - Run `python -m pip install ganga==7.1.9` to install Ganga to this virtual python
- - Run `deactivate` to leave the virtual env
- - Ensure `data-flow/env.sh` points to this location (`$HOME/ganga-7.1.9`) for the Ganga location
+  * Run `virtualenv ganga-7.1.9` in the home directory
+  * Run `source ganga-7.1.9/bin/activate` to enable the virtual python installation
+  * Run `python -m pip install ganga==7.1.9` to install Ganga to this virtual python
+  * Run `deactivate` to leave the virtual env
+  * Ensure `data-flow/env.sh` points to this location (`$HOME/ganga-7.1.9`) for the Ganga location
 * data-flow: Accessible via github
   * Needs pip install to generate libraries
   * Can also scp the data-flow/lib director from Cedar
