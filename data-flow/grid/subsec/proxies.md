@@ -90,5 +90,8 @@ And then when creating your proxy certificate, specify this file:
 voms-proxy-init --vomses ~/vomses --voms snoplus.snolab.ca
 ```
 
-
 This should be unnecessary on a machine where you are the sysadmin and can just edit the files under /etc/grid-security/vomses and is unnecessary on a grid environment configured according to the RAT Companion, but useful when using a shared machine with a CERN grid environment. 
+
+# Current VOMS Information
+
+The up-to-date VOMS information can be found [here](https://voms.gridpp.ac.uk:8443/voms/snoplus.snolab.ca/configuration/configuration.action). Note that this page may require a valid user certificate loaded in your browser to access.
