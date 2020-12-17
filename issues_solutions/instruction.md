@@ -378,3 +378,14 @@ This means that there is an issue with the **File Transfer Service** (FTS), whic
 * cd to the directory here, `~/data-flow/gasp/sites`, choose the site file you want. `XX_XX_processing.py` is for processing and `XX_XX_production.py` is for   production.
 * Include the rat version you want in `rat_locations`
 * If you don't want the jobs running on other sites, remember to comment out this rat version in the site file of other sites.
+
+---
+
+## **Instruction for experiencing outage in Snolab**
+
+**Solution:**
+
+Kill all the screen sessions on cedar/dirac
+* `screen -r` to the current screen session
+* `ctrl-a-k` then `y` to kill the current tab
+
