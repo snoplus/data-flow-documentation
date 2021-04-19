@@ -18,3 +18,4 @@ nav_order: 2
 * [misc/make_production](./scripts/misc_make_production.md)
 * [delete_jobs.py](./scripts/delete_jobs_py.md)
 * [storage_element_usage.py](./scripts/storage_element_usage_py.md)
+* [automate_resubmission.py](./scripts/automate_resubmission_py.md)
