@@ -5,7 +5,7 @@ parent: Getting Started
 nav_order: 5
 ---
 
-## **Shifting Checklist
+## **Shifting Checklist**
 
 ### Daily Checklist
 * Approve or Extend VOMS membership
@@ -50,6 +50,19 @@ nav_order: 5
   We have a automatic script `~/cron/retry_jobs.sh` that will resubmit some failed jobs that satisfy some specific requirements twice a day, but there are still some other jobs that have to be submitted manually.
   * Identify issues.
     We usually have email notifications turned on for failure jobs, the execution log will be attached along with the email. If the email includes `Note, no attachments for error/output logs!`, this means the job has no execution log, this usually happen when a job fails before actually running, which can be solved by resubmission. If you want further information, you can get `dirac_id` in its data document, and search that on [Dirac monitoring page](https://dirac.gridpp.ac.uk:8443/DIRAC/).
+    
+* Screen sessions
+  We use screen sessions to monitor our jobs, screen sessions only exist on cedar1 and Dirac. You can use `screen -r` to see it. Sometimes jobs are stalled because screen sessions get stuck, you can restart the screen session to fix it. You can find the step for killing the screen sessions in SNO+ issues and solutions guide.
+  
+* Graham monitoring
+   We have email alert when the transfer efficiency drops on Graham, you sould check Graham when you receive the alert.
+  
+  
+### Weekly Checklist
+* DWG meeting.
+  You need to attend weekly DWG call at 2:00 p.m. and give some information about shifting of this week in the data-flow section. Sign up the mailing list, snoplus@snolab.ca, for further information.
+  
+* Fill the [shift report](https://www.snolab.ca/snoplus/TWiki/bin/view/DAQ/ListOfAllDataFlowReports) every week.
     
 
 
