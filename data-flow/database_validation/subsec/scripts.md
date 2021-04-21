@@ -21,3 +21,4 @@ The following scripts are available in the `data-flow/gasp/validation` folder:
 * [storage_site_file_scan.py](./scripts/storage_site_file_scan_py.md) script to flag and unregister the zdabs on certain grid storage site and remove their corresponding CouchDB references.
 * [set_grid_permissions.py](./scripts/set_grid_permissions_py.md) script to update permissions on the lfn in order to keep everything group writeable
 * [delete_old_data.py](./scripts/delete_old_data_py.md) script to delete old data for either processing, production or pure data files.
+* [correct_datadoc_on_tape.py](./scripts/correct_datadoc_on_tape_py.md) script to correct locations in data documents, when a job has been moved to or moved back from tape
