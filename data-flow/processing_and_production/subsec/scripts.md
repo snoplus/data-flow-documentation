@@ -19,3 +19,4 @@ nav_order: 2
 * [delete_jobs.py](./scripts/delete_jobs_py.md)
 * [storage_element_usage.py](./scripts/storage_element_usage_py.md)
 * [automate_resubmission.py](./scripts/automate_resubmission_py.md)
+* [upload_production_info.py](./scripts/upload_production_info_py.md)
