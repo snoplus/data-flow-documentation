@@ -14,8 +14,9 @@ nav_order: 5
   Click [here](https://voms.gridpp.ac.uk:8443/voms/snoplus.snolab.ca/home/login.action) for membership approvement.
   Links will also be included in the email, you must be the admin first before doing above actions
   
-* Production or reprocessing request
-  You may receive production or reprocessing requests like the following:
+* Production requests
+  
+  You may receive production request like the following:
   ```
   Production Request for:
   Rat Version: 6.18.9
@@ -26,8 +27,25 @@ nav_order: 5
   Further Information:
   With the ratdb tag.
   ```
-  Production requests will be followed with attachments, usually a .json file and a .txt file. You should `scp` that you temporary directory on Cedar or Directory and run the following command for submission. Remember to source the environment script in `data-flow` first.
-  `python bin/production_submit.py ~/$TEMP_DIR/<file>.json -t <Rat DB Tag> -o ~/$TEMP_DIR/<file_name>.exactly -L ~/$TEMP_DIR/<file_name>.txt`
+  Production requests will be followed with attachments, usually a .json file and a .txt file. You should copy those to Cedar into a temporary directory:
+  ```bash
+  scp <file1> <file2> username@cedar.computecanada.ca:~/<my_temp_dir>
+  ```
+  Once the files are on Cedar, source the data-flow environment:
+  ```bash
+  cd ~/data-flow
+  source env.sh
+  cd gasp
+  ```
+  Now you are ready to submit the request:
+  ```python
+  python bin/production_submit.py ~/<my_temp_dir>/<file>.json -t <Rat DB Tag> -o ~/<my_temp_dir>/<file_name>.exactly -L ~/<my_temp_dir>/<file_name>.txt
+  ```
+  where `<file_name>.exactly` is the name of the output file, containing a list of all of the things submitted. It is important to keep track of these files, as they are referenced by members of the group so consider making a separate directory for storing these.
+  
+* Reprocessing requests
+
+  A reprocessing request looks similar to a production request:
   
   ```
   Reprocessing Request for:
@@ -43,30 +61,42 @@ nav_order: 5
   - nhit cut = 40
   - macro = https://github.com/snoplus/rat/blob/master/mac/processing/neck_fill/third_pass_analysis_processing_classifier.mac
   ```
-  Reprocessing requests will also be followed with attachments, usually a .txt runlist. Remember to check if the module exists in process_information_X_Y_Z.py in `data-flow/gasp/modules` first. Possible command for submission is:
-  `python bin/offline_processing.py config/<site>.cfg <ratV> L1 -t <Rat DB Tag> -N <Second Pass Module> -N <Third Pass Module>  -L ~/$TEMP_DIR/<file_name>.txt -o ~/$TEMP_DIR/<file_name>.exactly`
+
+  Reprocessing requests will also be followed by attachments, usually a `.txt` runlist file. Copy this to Cedar into a temporary directory:
+  ```bash
+  scp <file1> username@cedar.computecanada.ca:~/<my_temp_dir>
+  ```
+  Double-check that the processing module file exists in `~/data-flow/gasp/modules/processing_information_X_Y_Z.py`, where `X_Y_Z` is the RAT version that will be used. For example, `processing_information_6_18_9.py` for RAT 6.18.9
+  
+  If it is not there, then it needs to be created. [NEED TO ADD DOCS ON HOW]
+  
+  Once the file is on Cedar and the module is in the right place, source the data-flow environment:
+  ```bash
+  cd ~/data-flow
+  source env.sh
+  cd gasp
+  ```
+  Now you are ready to submit the request:
+  ```python
+  python bin/offline_processing.py config/<site>.cfg <ratV> L1 -t <Rat DB Tag> -N <Second Pass Module> -N <Third Pass Module>  -L ~/<my_temp_dir>/<file_name>.txt -o ~/<my_temp_dir>/<file_name>.exactly`
+  ```
+  where `<file_name>.exactly` is the name of the output file, containing a list of all of the things submitted. It is important to keep track of these files, as they are referenced by members of the group so consider making a separate directory for storing these.
+  
+  A **module** is slightly different than a **macro** - the easiest way to find out what the corresponding module is to the given macro is to look it up in the **processing_information_X_Y_Z.py** for that RAT version; the file is basically just a giant mapping of modules to macros with given arguments.
 
 * Failed jobs resubmission.
-  We have a automatic script `~/cron/retry_jobs.sh` that will resubmit some failed jobs that satisfy some specific requirements twice a day, but there are still some other jobs that have to be submitted manually.
+  We have a automatic script `~/cron/retry_jobs.sh` that will resubmit certain failed jobs that satisfy some specific requirements twice a day, but there are still some other jobs that have to be submitted manually.
   * Identify issues.
     We usually have email notifications turned on for failure jobs, the execution log will be attached along with the email. If the email includes `Note, no attachments for error/output logs!`, this means the job has no execution log, this usually happen when a job fails before actually running, which can be solved by resubmission. If you want further information, you can get `dirac_id` in its data document, and search that on [Dirac monitoring page](https://dirac.gridpp.ac.uk:8443/DIRAC/).
     
 * Screen sessions
-  We use screen sessions to monitor our jobs, screen sessions only exist on cedar1 and Dirac. You can use `screen -r` to see it. Sometimes jobs are stalled because screen sessions get stuck, you can restart the screen session to fix it. You can find the step for killing the screen sessions in SNO+ issues and solutions guide.
+  We use screen sessions to monitor and submit jobs. Screen sessions only exist on **cedar1** and **liverpool**. You can use `screen -r` to see them. 
   
-* Graham monitoring
-   We have email alert when the transfer efficiency drops on Graham, you sould check Graham when you receive the alert.
+  On cedar1, there should only be **benchmarking** and **offline_processing** screen tabs (the former submits and monitors benchmarking jobs, the latter inserts processing jobs to the database). If either or both screens are missing or having issues, they can be relaunched by running `~/cron/launch_processing_screen/launch_processing.sh`
   
+  On liverpool, there will always be at least one screen tab running, **enqueue_processing**, which checks the couch database for any jobs to submit and submits them. If a production was submitted, then **enqueue_production** should also be running which will submit these production jobs. If the screens need to be relaunched, first kill them and then run `~/cron/launch_processing_screen/launch_processing.sh`. The variables at the top of `launch_processing.sh` denote which screens will be launched, so modify them to true/false accordingly.
   
 ### Weekly Checklist
-* DWG meeting.
-  You need to attend weekly DWG call at 2:00 p.m. and give some information about shifting of this week in the data-flow section. Sign up the mailing list, snoplus@snolab.ca, for further information.
+* DWG meeting
+  You need to attend weekly DWG call on Tuesday at 2:00 p.m. EST and give updates on anything notable that happened during the last week. Sign up to the mailing list, snoplus@snolab.ca, for further information.
   
-* Fill the [shift report](https://www.snolab.ca/snoplus/TWiki/bin/view/DAQ/ListOfAllDataFlowReports) every week.
-    
-
-
-
-
-
-
