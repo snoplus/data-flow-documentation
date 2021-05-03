@@ -9,6 +9,7 @@ nav_order: 5
 
 ### Daily Checklist
 * Approve or Extend VOMS membership
+
   Email notifications will be sent out when there are requests need to be approved or extended.
   Click [here](https://voms.gridpp.ac.uk:8443/voms/snoplus.snolab.ca/user/search.action) for membership extension
   Click [here](https://voms.gridpp.ac.uk:8443/voms/snoplus.snolab.ca/home/login.action) for membership approvement.
@@ -87,12 +88,14 @@ nav_order: 5
   
   A **module** is slightly different than a **macro** - the easiest way to find out what the corresponding module is to the given macro is to look it up in the **processing_information_X_Y_Z.py** for that RAT version; the file is basically just a giant mapping of modules to macros with given arguments.
 
-* Failed jobs resubmission.
+* Failed jobs resubmission
+
   We have a automatic script `~/cron/retry_jobs.sh` that will resubmit certain failed jobs that satisfy some specific requirements twice a day, but there are still some other jobs that have to be submitted manually.
   * Identify issues.
     We usually have email notifications turned on for failure jobs, the execution log will be attached along with the email. If the email includes `Note, no attachments for error/output logs!`, this means the job has no execution log, this usually happen when a job fails before actually running, which can be solved by resubmission. If you want further information, you can get `dirac_id` in its data document, and search that on [Dirac monitoring page](https://dirac.gridpp.ac.uk:8443/DIRAC/).
     
 * Screen sessions
+
   We use screen sessions to monitor and submit jobs. Screen sessions only exist on **cedar1** and **liverpool**. You can use `screen -r` to see them. 
   
   On cedar1, there should only be **benchmarking** and **offline_processing** screen tabs (the former submits and monitors benchmarking jobs, the latter inserts processing jobs to the database). If either or both screens are missing or having issues, they can be relaunched by running `~/cron/launch_processing_screen/launch_processing.sh`
@@ -101,5 +104,6 @@ nav_order: 5
   
 ### Weekly Checklist
 * DWG meeting
+
   You need to attend weekly DWG call on Tuesday at 2:00 p.m. EST and give updates on anything notable that happened during the last week. Sign up to the mailing list, snoplus@snolab.ca, for further information.
   
