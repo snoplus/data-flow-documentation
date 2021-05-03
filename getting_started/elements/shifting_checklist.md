@@ -68,7 +68,10 @@ nav_order: 5
   ```
   Double-check that the processing module file exists in `~/data-flow/gasp/modules/processing_information_X_Y_Z.py`, where `X_Y_Z` is the RAT version that will be used. For example, `processing_information_6_18_9.py` for RAT 6.18.9
   
-  If it is not there, then it needs to be created. [NEED TO ADD DOCS ON HOW]
+  If it is not there, then it needs to be created. Since little changes between the modules, the process to create a new one is just:
+  - Make a copy of the latest `processing_information_X_Y_Z.py` file
+  - Rename it to include the latest RAT version
+  - Ask Valentina Lozza about any new changes to include, and add them in
   
   Once the file is on Cedar and the module is in the right place, source the data-flow environment:
   ```bash
