@@ -44,7 +44,7 @@ ssh -i <private ssh key file name> snoprod@cedar.computecanada.ca
 ### **Liverpool**
 Getting access to liverpool is similar to Cedar: 
 
-1. Email **fay@hep.ph.liv.ac.uk** or **jbland@hep.ph.liv.ac.uk** with your **public ssh key** (see [here](./tools.md#ssh-key) for how to generate an ssh key).
+1. Email **fay@hep.ph.liv.ac.uk** or **jbland@hep.ph.liv.ac.uk** with your **public ssh key** to request access for the **snoplusprod** account (see [here](./tools.md#ssh-key) for how to generate an ssh key).
 After the key is installed, run `cd ~/.ssh` to navigate to your SSH directory.
 
 2. To log in, run:
