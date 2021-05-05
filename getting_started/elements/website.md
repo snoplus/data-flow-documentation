@@ -31,7 +31,7 @@ Same as above, but for production.
 
 #### **Granfana**
 Grafana shows us the transfer status of data from SNOLAB being triplicated to our three primary sites. If transfer efficiency drops for a significant period of time, there is an issue with one of the sites. 
-* To login, click the following link, and choose "CERN Single Sign On" then you can sign in using a shared SNO+ account. Please inquire to the processing channel on Slack for more information.
+* To login, click the following link, and choose "CERN Single Sign On", and on the next page, click on "Guest Access". Then, use the processing account - please inquire to the processing channel on Slack for more information.
 
 [https://monit-grafana.cern.ch/login](https://monit-grafana.cern.ch/login)
 
