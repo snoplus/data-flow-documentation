@@ -58,10 +58,14 @@ yujun@fnal.gov
 
 ---
 
-**John Bland**
+**Liverpool Helpdesk**
 
 Issues with Liverpool site
 
+Contact the general helpdesk first here:
+helpdesk@hep.ph.liv.ac.uk
+
+If that isn't helpful or there are issues, contact John Bland directly:
 jbland@hep.ph.liv.ac.uk
 
 ---
