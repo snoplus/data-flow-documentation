@@ -38,9 +38,9 @@ After the generation, you will see two files; one is the `<name>` you entered be
 
 ### **VPN**
 A VPN is required to access Buffer1 and various other SNO+ resources; please follow the instructions to install it.
-1. Go to the [SNOLAB home page](https://www.snolab.ca/), then choose **Internal** to go to the internal site, which requires a snolab account
+1. Go to [this link](https://www.snolab.ca/docushare/dsweb/HomePage) which is the internal site for SNOLAB
 2. In **IT Services**, choose **Computing Support Page**
-3. In **Work Tools** section, select **VPN - Virtual Private Network**
+3. In **Work Tools** section, select **VPN - Virtual Private Network** (a direct link to the VPN page can be found [here](https://snolab.sharepoint.com/sites/ITSupport/SitePages/Access-to-VPNs.aspx))
 4. Choose the version to install according to your Operating System and follow the rest of the instructions on the page
 
 ---
