@@ -17,18 +17,26 @@ This is a high-level overview of the steps that data takes to be processed, star
 2. This data is used to create the required **run tables** (tables containing the information about the state of the detector at the time of data retrieval) for the rest of the processing chain
 3. A machine at SNOLAB called **buffer1** runs screen sessions of `dflow_register.py` and `offsite_transfers.py` to create documents for the raw data in CouchDB and register them to the grid, and then transfer them to the primary site (at the time of writing, this is **SFU**)
 4. Once this L1 data is ready to be processed (using the **second pass processing macro** which is commonly called the **processing module**), `offline_processing.py` will create job documents for the runs that are ready and mark those jobs as "waiting"
-5. The `gasp_client.py` also runs in a screen session infinitely (the **enqueue_processing** screen tab) and it does the following:
+5. To specify what will be automatically submitted for incoming data, open the corresponding processing information file for the RAT version that will be used; for example, `data-flow/gasp/modules/processing_information_6_18_11.py`
+6. Scroll to the bottom, and you should see something similar to the following:
+```python
+modules_for_run_type = {
+        "Physics": set(["Processing", "Analysis30"]),
+```
+This indicates that both the Processing and Analysis30 modules are being automatically submitted for each incoming raw data run. Modify this according to which Analysis module should be used (Processing should _always_ be submitted).
+
+7. The `gasp_client.py` also runs in a screen session infinitely (the **enqueue_processing** screen tab) and it does the following:
   * **Monitor** the status of jobs and updates the job documents in CouchDB
   * **Submit** jobs when they are able to run
   * **Reset** jobs if they are stuck
   * **Locks** jobs to a specific site (this is allocating jobs to the **farm document**)
-6. The **enqueue_processing** screen tab will flip between two commands:
+8. The **enqueue_processing** screen tab will flip between two commands:
   * Update the **job status** in **Ganga** (a unified backend job submission system; this can access job information directly from sites - ex. Slurm/Condor etc) and store the job information
   * Update the **job documents** on CouchDB using that stored Ganga job information
-7. (Continued from 4.) Once the `gasp_client.py` notices a waiting job, it will utilize Ganga and our tools (in `data-flow/gasp/GangaSNOplus`) to package all necessary scripts and tools to run the job on the specified site (backend)
-8. Jobs will get submitted to a specific site, and the **enqueue_processing** screen takes over to monitor it
-9. When a job's status is "completed", the output data will be saved on the specified Grid **storage element** (or **SE** for short; ex. lcg-snopse1 which is at SFU)
-10. **Third pass processing** (the "Analysis" module) is submitted once its pre-requisite processing run has completed
+9. (Continued from 4.) Once the `gasp_client.py` notices a waiting job, it will utilize Ganga and our tools (in `data-flow/gasp/GangaSNOplus`) to package all necessary scripts and tools to run the job on the specified site (backend)
+10. Jobs will get submitted to a specific site, and the **enqueue_processing** screen takes over to monitor it
+11. When a job's status is "completed", the output data will be saved on the specified Grid **storage element** (or **SE** for short; ex. lcg-snopse1 which is at SFU)
+12. **Third pass processing** (the "Analysis" module) is submitted once its pre-requisite processing run has completed
 
 ---
 
