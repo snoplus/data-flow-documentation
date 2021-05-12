@@ -18,7 +18,7 @@ You will need a GRID certificate to access many websites and resources within SN
 4. After receiving the response, you can download and import the certificate into the browser you will use (google how to install a certificate in whatever browser you use)
 5. Finally, you need to [apply to join the SNO+ virtual organisation (VO)](https://voms.gridpp.ac.uk:8443/voms/snoplus.snolab.ca). **Remember to use the browser with an imported certificate.**
 
-**NOTE** - Certain browsers may not handle the format of the certificate correctly. Try either Firefox and Chrome if one does not work.
+**NOTE** - Certain browsers may not handle the format of the certificate correctly, i.e Chrome. Try Firefox. 
 
 ---
 
