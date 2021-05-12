@@ -13,10 +13,10 @@ nav_order: 2
 You will need a GRID certificate to access many websites and resources within SNO+. The certificate **MUST** be installed in the browser that you will use to view such resources. 
 
 1. **For Canadian users**: Go to [this website](https://cert.gridcanada.ca/cgi-bin/pub/pki?cmd=getStaticPage&name=homePage)
-2. Choose **2 - Request a Certificate**, choose **User Request** and enter "snoplusdata.snolab.ca" as the host name
+2. Choose **2 - Request a Certificate**, choose **User Request** and enter "snoplusdata.snolab.ca" as the host name (MAKE NOTE OF THE PIN USED)
 3. **For users from other countries**, please follow the instructions [here](https://snopl.us/docs/rat/grid_manual/html/certificates_and_initial_setup.html)
 4. After receiving the response, you can download and import the certificate into the browser you will use (google how to install a certificate in whatever browser you use)
-5. Finally, you need to [apply to join the SNO+ virtual organisation (VO)](https://voms.gridpp.ac.uk:8443/voms/snoplus.snolab.ca). **Remember to use the browser with an imported certificate.**
+5. Finally, you need to [apply to join the SNO+ virtual organisation (VO)](https://voms.gridpp.ac.uk:8443/voms/snoplus.snolab.ca). **Remember to use the browser with an imported certificate.** This page will ask for a password associated with your key - input the **PIN** that was created in step 2.
 
 **NOTE** - Certain browsers may not handle the format of the certificate correctly, i.e Chrome. Try Firefox. 
 
