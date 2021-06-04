@@ -15,6 +15,8 @@ nav_order: 5
   Click [here](https://voms.gridpp.ac.uk:8443/voms/snoplus.snolab.ca/home/login.action) for membership approvement.
   Links will also be included in the email, you must be the admin first before doing above actions
   
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"  
+  
 * Production requests
   
   You may receive production request like the following:
@@ -44,6 +46,7 @@ nav_order: 5
   ```
   where `<file_name>.exactly` is the name of the output file, containing a list of all of the things submitted. It is important to keep track of these files, as they are referenced by members of the group so consider making a separate directory for storing these.
   
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"  
 * Reprocessing requests
 
   A reprocessing request looks similar to a production request:
@@ -92,12 +95,16 @@ nav_order: 5
   1. Use `-f` only when you need to set Analysis job's Processing prerequisite to the largest (most recent) pass number of Processing for each run instead of requiring it be part of      the submission.
   2. Sometimes you need to submit both processing and analysis jobs with these processing ones being prerequisite for the analysis. Use `-N <Processing module> -N <Analysis module>`      to submit them all together. It is best to do this in one step, specifying all modules, than submitting processing modules and then submitting analysis modules which won't work.
 
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+
 * Failed jobs resubmission
 
   We have a automatic script `~/cron/retry_jobs.sh` that will resubmit certain failed jobs that satisfy some specific requirements twice a day, but there are still some other jobs that have to be submitted manually.
   * Identify issues.
     We usually have email notifications turned on for failure jobs, the execution log will be attached along with the email. If the email includes `Note, no attachments for error/output logs!`, this means the job has no execution log, this usually happen when a job fails before actually running, which can be solved by resubmission. If you want further information, you can get `dirac_id` in its data document, and search that on [Dirac monitoring page](https://dirac.gridpp.ac.uk:8443/DIRAC/).
-    
+
+"------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+
 * Screen sessions
 
   We use screen sessions to monitor and submit jobs. Screen sessions only exist on **cedar1** and **liverpool**. You can use `screen -r` to see them. 
