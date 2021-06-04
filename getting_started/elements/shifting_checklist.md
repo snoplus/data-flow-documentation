@@ -89,8 +89,8 @@ nav_order: 5
   A **module** is slightly different than a **macro** - the easiest way to find out what the corresponding module is to the given macro is to look it up in the **processing_information_X_Y_Z.py** for that RAT version; the file is basically just a giant mapping of modules to macros with given arguments.
   
   **Note:**
-  1. Use `-f` only when you need to set Analysis job's Processing prerequisite to the largest (most recent) pass number of Processing for each run instead of requiring it be part of      the submission
-  2. Sometimes you need to submit both processing and analysis jobs with these processing ones being prerequisite for the analysis. Use `-N <Processing module> -N <analysis module>`      to submit them all together. It is best to do this in one step, specifying all modules, than submitting processing modules and then submitting analysis modules which won't work.
+  1. Use `-f` only when you need to set Analysis job's Processing prerequisite to the largest (most recent) pass number of Processing for each run instead of requiring it be part of      the submission.
+  2. Sometimes you need to submit both processing and analysis jobs with these processing ones being prerequisite for the analysis. Use `-N <Processing module> -N <Analysis module>`      to submit them all together. It is best to do this in one step, specifying all modules, than submitting processing modules and then submitting analysis modules which won't work.
 
 * Failed jobs resubmission
 
