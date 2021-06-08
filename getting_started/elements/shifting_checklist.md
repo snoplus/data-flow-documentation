@@ -101,6 +101,8 @@ nav_order: 5
 * Failed jobs resubmission
 
   We have a automatic script `~/cron/retry_jobs.sh` that will resubmit certain failed jobs that satisfy some specific requirements twice a day, but there are still some other jobs that have to be submitted manually.
+  * Part Failed jobs
+    Sometimes we need to rsubmit part failed jobs. Use retry_failed.py to resubmit them instead of using offline_processing .py which would give these jobs a new unwanted pass.
   * Identify issues.
     We usually have email notifications turned on for failure jobs, the execution log will be attached along with the email. If the email includes `Note, no attachments for error/output logs!`, this means the job has no execution log, this usually happen when a job fails before actually running, which can be solved by resubmission. If you want further information, you can get `dirac_id` in its data document, and search that on [Dirac monitoring page](https://dirac.gridpp.ac.uk:8443/DIRAC/).
 
