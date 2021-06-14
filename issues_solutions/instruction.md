@@ -89,8 +89,7 @@ Run `diskusage_report` to obtain a breakdown of allocated space for these direct
 If you need to resubmit a canceled job, the usual way is to use the `retry_failed.py` script from gasp. This will however resubmit all canceled passes for specific run / module combination at once with no option to select a specific pass. If you only need to resubmit the last pass, you can follow the solution here.
   
 **Solution:**
-A [new view in CouchDB](https://couch.snopl.us/_utils/#/database/data-processing/_design/dproc/_view/job_passes_by_module_status_reduce_lastpassonly) was made 
-that lists only the status of the last pass for a particular run/module. A copy of `retry_failed.py` script was created, called `retry_failed_last.py` (in the same folder), that is an exact copy of `retry_failed.py` BUT using the new view, therefore only looping through the latest pass for each run/module.
+Use 'retry_failed.py' with '--lastpass' flag and it will resubmit only the last pass.
 
 ---
 
