@@ -110,6 +110,10 @@ With multiple sites running processing or production, the desire to control what
 **Solution:**
 In the `~/data-flow/gasp/sites/` directory exists the python site files usually in the format `<site>_<backend>_<processing/production>.py`. In each of these will be a dictionary called rat_versions that point to the env.sh for each rat version. Remove/comment out the line pointing to the environment file you wish to ban from running on that specific site. Add the line back to allow that site to run that rat version. 
 
+**Note:** 
+This works only at the sites enqueue_processing is running on a screen and it would make jobs with those ratv not run at all on any sites. This change is in conjunction with 
+changing everything to get submitted through DIRAC as submission don't run though all different sites now.
+
 ---
 
 ## **The primary site for offsite transfers has a severe drop in efficiency. I want to switch the first site data is transferred to from SNOLAB.**
