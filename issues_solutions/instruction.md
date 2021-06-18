@@ -376,3 +376,16 @@ Kill all the screen sessions on cedar/dirac
 * `screen -r` to the current screen session
 * `ctrl-a-k` then `y` to kill the current tab
 
+---
+
+## **How to run different types of jobs on different sites**
+
+Sometimes we want to run "split site mode" and submit different jobs (incoming processing/analysis, reprocessing and production) on different sites.
+
+**Solution**
+`diracSubmitScript.py` was updated and we have the following info available to us just before any job gets submitted:
+- Rat version
+- Module
+- Run number
+If we have any reprocessing/production jobs that we would like to run on specific sites, we would be able to filter them using the above attributes. 
+
