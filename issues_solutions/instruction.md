@@ -391,3 +391,10 @@ Sometimes we want to run "split site mode" and submit different jobs (incoming p
 
 If we have any reprocessing/production jobs that we would like to run on specific sites, we would be able to filter them using the above attributes. 
 
+---
+
+## **Stop a jobs with a specific RAT version to run of any site
+
+**Solution:**
+
+Comment out the RAT version under `rat_locations` inside `<site>_processing..py` file in `data-flow/gasp/sites` directory on the site where `enqueue_processing` screen session is running.
