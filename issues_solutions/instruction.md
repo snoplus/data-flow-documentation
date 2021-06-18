@@ -382,7 +382,8 @@ Kill all the screen sessions on cedar/dirac
 
 Sometimes we want to run "split site mode" and submit different jobs (incoming processing/analysis, reprocessing and production) on different sites.
 
-**Solution**
+**Solution:**
+
 `diracSubmitScript.py` was updated and we have the following info available to us just before any job gets submitted:
 - Rat version
 - Module
