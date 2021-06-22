@@ -312,6 +312,7 @@ where [TRANSFER_ID] is the ID you previously copied. It should say "CANCELLED" i
 **Solution:**
 
 This usually happens if you leave couch open in a tab for too long. Close the tab and open a new one, and couch should start working again.
+Otherwise, if you created a new view on Couch it takes about 15-25 minutes for it to reload everything.
 
 ---
 
@@ -335,7 +336,7 @@ This is a pretty general issue and could be caused by many things, but some comm
 
 3. Make sure transfers on buffer1 are working - this can quickly be verified by looking at Grafana and ensuring all 3 sites show high transfer efficiency; however, you should also check the screens running on buffer1 as well just to ensure there are no errors popping up. If the raw data can't get out of SNOLAB, it can't be used to fulfill the prerequisites for processing (and likewise, run-by-run production also won't have the runs appropriate to simulate off of).
 
-If all of this fails, consult Jamie Rajewski (jrajewsk@ualberta.ca) or Richella Li (jl26@ualberta.ca).
+If all of this fails, consult Jamie Rajewski (jrajewsk@ualberta.ca) or Purvi S. (purvi@ualberta.ca).
 
 ---
 
