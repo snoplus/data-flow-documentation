@@ -26,11 +26,6 @@ nav_order: 5
   
   On liverpool, there will always be at least one screen tab running, **enqueue_processing**, which checks the couch database for any jobs to submit and submits them. If a production was submitted, then **enqueue_production** should also be running which will submit these production jobs. If the screens need to be relaunched, first kill them and then run `~/cron/launch_processing_screen/launch_processing.sh`. The variables at the top of `launch_processing.sh` denote which screens will be launched, so modify them to true/false accordingly.
   
-### Weekly Checklist
-* DWG meeting
-
-  You need to attend weekly DWG call on Tuesday at 2:00 p.m. EST and give updates on anything notable that happened during the last week. Sign up to the mailing list, snoplus@snolab.ca, for further information.
-  
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 * Production requests
@@ -124,4 +119,7 @@ nav_order: 5
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-  
+### Weekly Checklist
+* DWG meeting
+
+  You need to attend weekly DWG call on Tuesday at 2:00 p.m. EST and give updates on anything notable that happened during the last week. Sign up to the mailing list, snoplus@snolab.ca, for further information.  
