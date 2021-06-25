@@ -15,8 +15,24 @@ nav_order: 5
   Click [here](https://voms.gridpp.ac.uk:8443/voms/snoplus.snolab.ca/home/login.action) for membership approvement.
   Links will also be included in the email, you must be the admin first before doing above actions
   
-------------------------------------------------------------------------------------------------------------------------------------------------------------  
+------------------------------------------------------------------------------------------------------------------------------------------------------------
   
+
+* Screen sessions
+
+  We use screen sessions to monitor and submit jobs. Screen sessions only exist on **cedar1** and **liverpool**. You can use `screen -r` to see them. 
+  
+  On cedar1, there should only be **benchmarking** and **offline_processing** screen tabs (the former submits and monitors benchmarking jobs, the latter inserts processing jobs to the database). If either or both screens are missing or having issues, they can be relaunched by running `~/cron/launch_processing_screen/launch_processing.sh`
+  
+  On liverpool, there will always be at least one screen tab running, **enqueue_processing**, which checks the couch database for any jobs to submit and submits them. If a production was submitted, then **enqueue_production** should also be running which will submit these production jobs. If the screens need to be relaunched, first kill them and then run `~/cron/launch_processing_screen/launch_processing.sh`. The variables at the top of `launch_processing.sh` denote which screens will be launched, so modify them to true/false accordingly.
+  
+### Weekly Checklist
+* DWG meeting
+
+  You need to attend weekly DWG call on Tuesday at 2:00 p.m. EST and give updates on anything notable that happened during the last week. Sign up to the mailing list, snoplus@snolab.ca, for further information.
+  
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 * Production requests
   
   You may receive production request like the following:
@@ -108,16 +124,4 @@ nav_order: 5
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-* Screen sessions
-
-  We use screen sessions to monitor and submit jobs. Screen sessions only exist on **cedar1** and **liverpool**. You can use `screen -r` to see them. 
-  
-  On cedar1, there should only be **benchmarking** and **offline_processing** screen tabs (the former submits and monitors benchmarking jobs, the latter inserts processing jobs to the database). If either or both screens are missing or having issues, they can be relaunched by running `~/cron/launch_processing_screen/launch_processing.sh`
-  
-  On liverpool, there will always be at least one screen tab running, **enqueue_processing**, which checks the couch database for any jobs to submit and submits them. If a production was submitted, then **enqueue_production** should also be running which will submit these production jobs. If the screens need to be relaunched, first kill them and then run `~/cron/launch_processing_screen/launch_processing.sh`. The variables at the top of `launch_processing.sh` denote which screens will be launched, so modify them to true/false accordingly.
-  
-### Weekly Checklist
-* DWG meeting
-
-  You need to attend weekly DWG call on Tuesday at 2:00 p.m. EST and give updates on anything notable that happened during the last week. Sign up to the mailing list, snoplus@snolab.ca, for further information.
   
