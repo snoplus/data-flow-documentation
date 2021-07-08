@@ -129,7 +129,7 @@ TCP/IP connections on port 5432?]
 ```
 
 **Solution:**
-In both the slurm production (`~/data-flow/gasp/config/slurm_production.cfg`) and processing (`~/data-flow/gasp/config/slurm_processing.cfg`) files, the path for postgres must be change from `#snopl_url=postgres://lcg-snodb.sfu.computecanada.ca:5432` (i.e. pointing to sfu) to the variable `snopl_url=postgres://pgsql.snopl.us:5400` (i.e. pointing to snolab db).
+In both the slurm production (`~/data-flow/gasp/config/production.cfg`) and processing (`~/data-flow/gasp/config/processing.cfg`) files, the path for postgres must be change from `#snopl_url=postgres://lcg-snodb.sfu.computecanada.ca:5432` (i.e. pointing to sfu) to the variable `snopl_url=postgres://pgsql.snopl.us:5400` (i.e. pointing to snolab db).
 
 Some jobs are still likely to fail following this correction. However, running the retry_failed script (following the completion of the processing/production jobs) should apply the new settings and run correctly.
 
