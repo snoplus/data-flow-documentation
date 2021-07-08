@@ -41,7 +41,7 @@ As a last resort, the slack channel can be used as a fall back for sourcing info
 ## **Where do I access the weekly usage plots for the DWG call?**
 
 **Solution:**
-The plots are automatically generated each week. You can find the latest ones on cedar, in ` ~/monitoring/processing-plots` directory, using command `ls -ltrh`. The 3 plots needed have the following naming format “weekly-usage-X.png”.
+The plots are automatically generated each week. You can find the latest ones on cedar, in ` ~/data-flow/gasp/monitoring/processing-plots` directory, using command `ls -ltrh`. The 3 plots needed have the following naming format “weekly-usage-X.png”.
 
 ---
 
@@ -394,7 +394,7 @@ If we have any reprocessing/production jobs that we would like to run on specifi
 
 ---
 
-## **Stop a jobs with a specific RAT version to run of any site
+## **Stop a jobs with a specific RAT version to run of any site**
 
 **Solution:**
 
