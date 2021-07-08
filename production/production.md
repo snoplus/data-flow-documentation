@@ -22,13 +22,13 @@ This is a high-level overview of the steps that it takes to produce Monte Carlo 
 
 3. Once the request is filled out and submitted, the emails listed in the contact portion and the **snoplus_vosupport** mailing list will receive the request which will have attached the created **jobs.json** file, containing all of the request details in the necessary format and ready to be submitted by `production_submit.py`
 
-4. Ensure that there is a corresponding **production_information_x_x_x.py** for the RAT version being used; you can check in `data-flow/gasp/modules`. If there isn't, you can generate one by running `make_production` in `data-flow/gasp/bin`, which takes a path to the RAT version that you are generating the file for, the processing config file (ex. on cedar, this file is located at `data-flow/gasp/config/slurm_processing.cfg` - yes, the processing one is the correct one) and the output file name, which should follow the format above. Prior to running it, please source the data-flow `env.sh` and the `env_rat-x.x.x.sh` for the correct RAT from CVMFS - this will allow you to simply pass the RAT path environment variable `$RATROOT` as the path. An example of this process for RAT 6.18.7 would be:
+4. Ensure that there is a corresponding **production_information_x_x_x.py** for the RAT version being used; you can check in `data-flow/gasp/modules`. If there isn't, you can generate one by running `make_production` in `data-flow/gasp/bin`, which takes a path to the RAT version that you are generating the file for, the processing config file (ex. on cedar, this file is located at `data-flow/gasp/config/processing.cfg` - yes, the processing one is the correct one) and the output file name, which should follow the format above. Prior to running it, please source the data-flow `env.sh` and the `env_rat-x.x.x.sh` for the correct RAT from CVMFS - this will allow you to simply pass the RAT path environment variable `$RATROOT` as the path. An example of this process for RAT 6.18.7 would be:
 ```bash
 cd ~/data-flow
 source env.sh
 source /cvmfs/snoplus.egi.eu/sl7/sw/6.18.7/env_rat-6.18.7.sh
 cd gasp/bin
-./make_production -c ../config/slurm_processing.cfg $RATROOT production_information_6_18_7.py
+./make_production -c ../config/processing.cfg $RATROOT production_information_6_18_7.py
 ```
 You should see it authenticate and login to CouchDB - this is because the result will be uploaded to couch as a document, which the Production Request page pulls sources its information from. On success, you then need to move the resulting file to the `modules` directory:
 ```bash
