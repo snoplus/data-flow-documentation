@@ -25,7 +25,7 @@ To run the associated python script on its own:
 python cumulative_cpu_usage.py -c [config] -sd [start date] -ed [end date]
 
 # Required arguments for python script:
-#  -c [config]: Path to the slurm configuration file (in this case, usually config/slurm_processing.cfg)
+#  -c [config]: Path to the slurm configuration file (in this case, usually config/processing.cfg)
 #  -sd [start date]: Start date formatted as mm/dd/yy
 #  -ed [end date]: End date formatted as mm/dd/yy
 ```
