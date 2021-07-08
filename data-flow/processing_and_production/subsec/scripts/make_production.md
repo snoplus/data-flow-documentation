@@ -12,7 +12,7 @@ Example usage:
 ```bash
 python bin/make_production [-c config] [rat_dir] [output]
 # Required options:
-#  [-c config]: specify the path to the processing config (usually gasp/config/slurm_processing.cfg)
+#  [-c config]: specify the path to the processing config (usually gasp/config/processing.cfg)
 #  [rat_dir]: point to the directory holding the fixed release of RAT (if it is in cvmfs, then simply source the corresponding RAT environment and you can put $RATROOT)
 #  [output]: e.g. data-flow/gasp/modules/production_information_5_3_2.py for RAT version 5.3.2
 ```
