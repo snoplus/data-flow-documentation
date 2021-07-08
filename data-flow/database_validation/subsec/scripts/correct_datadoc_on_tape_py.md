@@ -24,4 +24,4 @@ optional arguments:
 ```
 
 Example usage:
-`python correct_datadoc_on_tape.py -c ../config/slurm_processing.cfg -f to-tape.log --move-back`
+`python correct_datadoc_on_tape.py -c ../config/processing.cfg -f to-tape.log --move-back`
