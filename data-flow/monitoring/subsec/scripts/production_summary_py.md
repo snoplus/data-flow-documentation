@@ -17,17 +17,17 @@ nav_exclude: true
  
  Get a summary (on cedar) for all **production** jobs labelled as "TeLoaded2018a": 
  ```bash
- python monitoring/production_summary.py --label TeLoaded2018a $HOME/data-flow/gasp/config/slurm_production.cfg
+ python monitoring/production_summary.py --label TeLoaded2018a $HOME/data-flow/gasp/config/production.cfg
 ```
 
 Get a summary (on cedar) for all **production** jobs that have "Solar" in the module name and ratV 6.17.6: 
 ```bash
-python monitoring/production_summary.py --wildcard Solar --version 6.17.6 $HOME/data-flow/gasp/config/slurm_production.cfg
+python monitoring/production_summary.py --wildcard Solar --version 6.17.6 $HOME/data-flow/gasp/config/production.cfg
 ```
 
 Get a summary (on cedar) for all **processing** jobs that are labelled as "AmBe2019a": 
 ```bash
-python monitoring/production_summary.py --label AmBe2019a $HOME/data-flow/gasp/config/slurm_processing.cfg
+python monitoring/production_summary.py --label AmBe2019a $HOME/data-flow/gasp/config/processing.cfg
 
 usage: production_summary.py [-h] [--version VERSION]
                              (--label LABEL | --wildcard WILDCARD)
