@@ -17,4 +17,4 @@ optional arguments:
   ```
   
   Example usage:
-  ` python bin/upload_production_info.py -c config/slurm_processing.cfg -o production_information_6_18_9.py`
+  ` python bin/upload_production_info.py -c config/processing.cfg -o production_information_6_18_9.py`
