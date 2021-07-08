@@ -25,5 +25,5 @@ To run the associated python script on its own:
 python storage_element_usage.py -c [config]
 
 # Required arguments for python script:
-#  -c [config]: Path to the slurm configuration file (in this case, usually config/slurm_processing.cfg)
+#  -c [config]: Path to the slurm configuration file (in this case, usually config/processing.cfg)
 ```
