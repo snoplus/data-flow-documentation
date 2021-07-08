@@ -23,7 +23,7 @@ You will need a GRID certificate to access many websites and resources within SN
 ---
 
 ### **SSH Key**
-**For Linux/macOS**
+**For Linux/macOS/GitBash**
 1. Run `cd ~/.ssh` to navigate to your ssh directory. In case you do not have the directory, you can run `mkdir ~/.ssh`.
 2. Run `ssh-keygen`, it will ask you to enter the name and the keyphrase (password for the key file) if you want one.
 
