@@ -28,4 +28,4 @@ optional arguments:
 ### Tips:
 The script is set as a cronjob in retry_jobs.sh  in `cron` directory
 General Format:
-  `python bin/automate_resubmission.py config/slurm_processing.cfg 6.18.11`
+  `python bin/automate_resubmission.py config/processing.cfg 6.18.11`
