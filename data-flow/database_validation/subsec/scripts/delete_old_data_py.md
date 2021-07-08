@@ -36,11 +36,11 @@ The selection parameters are:
 * rat version, module and file type for Data
 * rat version, module, file type and run for Processing and Production 
 
-Example usage for processing: - python delete_old.py -c ../config/slurm_processing.cfg -v 6.2.6 -m TestProc –start 123456 –end 123456 -type Processing
+Example usage for processing: - python delete_old.py -c ../config/processing.cfg -v 6.2.6 -m TestProc –start 123456 –end 123456 -type Processing
 
-Example usage for production: - python delete_old.py -c ../config/slurm_production.cfg -v 6.2.6 -m TestProd –start 123456 –end 123456 -type Production
+Example usage for production: - python delete_old.py -c ../config/production.cfg -v 6.2.6 -m TestProd –start 123456 –end 123456 -type Production
 
-Example usage for data: - python delete_old.py -c ../config/slurm_production.cfg -v 6.2.6 -m TestData –start 123456 –end 123456 -type Data 
+Example usage for data: - python delete_old.py -c ../config/production.cfg -v 6.2.6 -m TestData –start 123456 –end 123456 -type Data 
 
 The code itself is divided into 3 different parts: 
 * Loops through the job documents to collect data IDs. Removes outputs and updates the documents. This is skipped for "Data" mode. 
