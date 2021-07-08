@@ -6,7 +6,7 @@ nav_exclude: true
 
 ## fix_unregistered.py
 
-This script is used to scan all data documents in the unregistered view of dflow and ensure they either become registered or have their "notRegistered" tag removed if their replicas exist on the grid already. This script can differentiate between data-processing and data-production databases by supplying the corresponding configuration file (slurm_processing or slurm_production). 
+This script is used to scan all data documents in the unregistered view of dflow and ensure they either become registered or have their "notRegistered" tag removed if their replicas exist on the grid already. This script can differentiate between data-processing and data-production databases by supplying the corresponding configuration file (processing.cfg or production.cfg). 
  
  ```bash
 python validation/fix_unregistered.py [-c CONFIG]
