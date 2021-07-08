@@ -12,7 +12,7 @@ usage: upload_production_info.py [-h] [-c CONFIG] [-o OUTPUT]
 
 optional arguments:
   -h, --help  show this help message and exit
-  -c CONFIG   CouchDB configuration file (USE slurm_processing.cfg)
+  -c CONFIG   CouchDB configuration file (USE processing.cfg)
   -o OUTPUT   Output filename like production_information_X_Y_Z.py
   ```
   
