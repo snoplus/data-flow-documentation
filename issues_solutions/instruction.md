@@ -312,6 +312,7 @@ where [TRANSFER_ID] is the ID you previously copied. It should say "CANCELLED" i
 **Solution:**
 
 This usually happens if you leave couch open in a tab for too long. Close the tab and open a new one, and couch should start working again.
+
 Otherwise, if you created a new view on Couch it takes about 15-25 minutes for it to reload everything.
 
 ---
@@ -375,7 +376,8 @@ This means that there is an issue with the **File Transfer Service** (FTS), whic
 
 Kill all the screen sessions on cedar/dirac
 * `screen -r` to the current screen session
-* `ctrl-a-k` then `y` to kill the current tab
+* `ctrl-a-k` then `y` to kill the current tab 
+* OR screen -X -S <session # you want to kill> kill
 
 ---
 
