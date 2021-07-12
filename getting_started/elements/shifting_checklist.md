@@ -111,7 +111,7 @@ nav_order: 5
 
 * Failed jobs resubmission
 
-  We have a automatic script `~/cron/retry_jobs.sh` that will resubmit certain failed jobs that satisfy some specific requirements twice a day and retry_failed.py has been integrated   into gasp_client to resubmit part failed jobs **only after run 270000**, but there are still some other jobs that have to be submitted manually.
+  We have a automatic script `~/cron/retry_jobs.sh` that will resubmit certain failed jobs that satisfy some specific requirements twice a day and retry_failed.py has been integrated   into gasp_client to resubmit part failed and failed jobs **only after run 270000**; this works for both Processing as well as Productions jobs. But there are still some other jobs that have to be submitted manually.
   * Part Failed jobs
     Sometimes we need to rsubmit part failed jobs. Use retry_failed.py to resubmit them instead of using offline_processing .py which would give these jobs a new unwanted pass.
   * Identify issues.
