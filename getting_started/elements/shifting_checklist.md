@@ -105,7 +105,8 @@ nav_order: 5
   
   **Note:**
   1. Use `-f` only when you need to set Analysis job's Processing prerequisite to the largest (most recent) pass number of Processing for each run instead of requiring it be part of      the submission.
-  2. Sometimes you need to submit both processing and analysis jobs with these processing ones being prerequisite for the analysis. Use `-N <Processing module> -N <Analysis module>`      to submit them all together. It is best to do this in one step, specifying all modules, than submitting processing modules and then submitting analysis modules which won't always work. You don't need `-f` flag in this case.
+  2. Sometimes you need to submit both processing and analysis jobs with these processing ones being prerequisite for the analysis. Use `-N <Processing module> -N <Analysis module>`      to submit them all together. It is best to do this in one step, specifying all modules, than submitting processing modules and then submitting analysis modules which won't always work. 
+  You don't need `-f` flag in this case.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
