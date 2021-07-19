@@ -408,4 +408,4 @@ Comment out the RAT version under `rat_locations` inside `<site>_processing..py`
 
 **Solution:**
 
-This is the (site)[https://snopl.us/production/] used to add and send processing and production requests
+This is the [site](https://snopl.us/production/) used to add and send processing and production requests
