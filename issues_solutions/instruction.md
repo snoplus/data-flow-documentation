@@ -401,3 +401,11 @@ If we have any reprocessing/production jobs that we would like to run on specifi
 **Solution:**
 
 Comment out the RAT version under `rat_locations` inside `<site>_processing..py` file in `data-flow/gasp/sites` directory on the site where `enqueue_processing` screen session is running.
+
+---
+
+## **Where can I add processing or production requests?**
+
+**Solution:**
+
+This is the (site)[https://snopl.us/production/] used to add and send processing and production requests
