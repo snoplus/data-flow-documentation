@@ -10,13 +10,17 @@ New production clients will need access to Ganga (**no logner available via CVMF
 
 ### Software needed
 * gridui: Accessible via /cvmfs/grid.cern.ch
-* ganga: Create a virtual environment for python 2.7 by running the following:
+* ganga:
+  
+  **Recommended to copy ganga-7.1.9 dir from liverpool or a site where the screens already works to avoid compatibility issues with Dirac**
+  
+  Create a virtual environment for python 2.7 by running the following:
   * Run `virtualenv ganga-7.1.9` in the home directory
   * Run `source ganga-7.1.9/bin/activate` to enable the virtual python installation
   * Run `python -m pip install ganga==7.1.9` to install Ganga to this virtual python
   * Run `deactivate` to leave the virtual env
   * Ensure `data-flow/env.sh` points to this location (`$HOME/ganga-7.1.9`) for the Ganga location
-  **Recommended to copy ganga-7.1.9 dir from liverpool or a site where the screens already works to avoid compatibility issues with Dirac
+  
 * data-flow: Accessible via github
   * Needs pip install to generate libraries
   * Can also scp the data-flow/lib director from Cedar
@@ -44,7 +48,9 @@ Basically the screen sessions just need loops both checking and submitting jobs.
 
 ### Dirac
 Dirac is used to interface with the Grid. This provides submission and monitoring tools. To setup the dirac_ui first follow instructions [here](https://www.gridpp.ac.uk/wiki/Quick_Guide_to_Dirac).
-**Recommended to copy dirac_ui dir from liverpool or a site where the screens already works to avoid compatibility issues with Ganga
+
+**Recommended to copy dirac_ui dir from liverpool or a site where the screens already works to avoid compatibility issues with Ganga**
+
 ```bash
 # You will need a script checks dirac proxy validity and reminds operators to renew proxies (the one here
 # will have a lifetime of 1000 hours)
