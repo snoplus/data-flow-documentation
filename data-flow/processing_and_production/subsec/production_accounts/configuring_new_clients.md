@@ -13,6 +13,7 @@ New production clients will need access to Ganga (**no logner available via CVMF
 * ganga:
   
   **Recommended to copy ganga-7.1.9 dir from liverpool or a site where the screens already work to avoid compatibility issues with Dirac**
+  **New installation of the same version can give problems too**
   
   Create a virtual environment for python 2.7 by running the following:
   * Run `virtualenv ganga-7.1.9` in the home directory
@@ -50,6 +51,7 @@ Basically the screen sessions just need loops both checking and submitting jobs.
 Dirac is used to interface with the Grid. This provides submission and monitoring tools. To setup the dirac_ui first follow instructions [here](https://www.gridpp.ac.uk/wiki/Quick_Guide_to_Dirac).
 
 **Recommended to copy dirac_ui dir from liverpool or a site where the screens already work to avoid compatibility issues with Ganga**
+**New installation of the same version can give problems too**
 
 ```bash
 # You will need a script checks dirac proxy validity and reminds operators to renew proxies (the one here
