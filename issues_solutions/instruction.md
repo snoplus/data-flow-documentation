@@ -414,7 +414,7 @@ This is the [site](https://snopl.us/production/) used to add and send processing
 
 ## **Bad Run Number causinng data transfer efficiency issues**
 
-**Solution**
+**Solution:**
 
 If you are having efficiency issues with data transfer **and** there are jobs with a very large run number failing to get transferred from buffer1, these are bad runs that need to be deleted. 
 
