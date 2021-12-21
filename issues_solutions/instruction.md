@@ -412,7 +412,7 @@ This is the [site](https://snopl.us/production/) used to add and send processing
 
 ---
 
-## **Bad Run Number causinng data transfer efficiency issues**
+## **Bad run number causing data transfer efficiency issues**
 
 **Solution:**
 
