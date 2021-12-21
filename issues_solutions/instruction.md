@@ -409,3 +409,12 @@ Comment out the RAT version under `rat_locations` inside `<site>_processing..py`
 **Solution:**
 
 This is the [site](https://snopl.us/production/) used to add and send processing and production requests
+
+---
+
+## **Bad Run Number causinng data transfer efficiency issues**
+
+**Solution**
+
+If you are having efficiency issues with data transfer **and** there are jobs with a very large number failing to get transferred from buffer1, these are bad runs that need to be deleted. Delete the files on buffer1 (you might find it under /raid/data/l1/bad_run_number/, gfal-ls the file to find which directories it is under. It can exist under multiple dirs). Delete their corresponding data docs on CouchDB as well.
+Changes to `offsite_transfer` have been made to warn and skip these very large bad runs. 
