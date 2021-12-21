@@ -416,7 +416,7 @@ This is the [site](https://snopl.us/production/) used to add and send processing
 
 **Solution**
 
-If you are having efficiency issues with data transfer **and** there are jobs with a very large number failing to get transferred from buffer1, these are bad runs that need to be deleted. 
+If you are having efficiency issues with data transfer **and** there are jobs with a very large run number failing to get transferred from buffer1, these are bad runs that need to be deleted. 
 
 - Delete the files on buffer1 (you might find it under /raid/data/l1/bad_run_number/, grep the file to find which directories it is under. It can exist under multiple dirs). 
 - Delete their corresponding data docs on CouchDB as well.
