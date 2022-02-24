@@ -28,7 +28,7 @@ cd ~/data-flow
 source env.sh
 source /cvmfs/snoplus.egi.eu/sl7/sw/6.18.7/env_rat-6.18.7.sh
 cd gasp/bin
-./make_production -c ../config/processing.cfg $RATROOT production_information_6_18_7.py
+./make_production -c ../config/production.cfg $RATROOT production_information_6_18_7.py
 ```
 You should see it authenticate and login to CouchDB - this is because the result will be uploaded to couch as a document, which the Production Request page pulls sources its information from. On success, you then need to move the resulting file to the `modules` directory:
 ```bash
