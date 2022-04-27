@@ -57,8 +57,9 @@ optional arguments:
   -s, --skip-ratdb-check
                         Do not check for ratdb tables before submitting runs
                         (useful when producing tables)
-  -f, --find-prereq     Use the most recent available prereq instead of
-                        requiring it be part of the submission
+  -f, --find-prereq     Find the prerequisite. Required to run a module without
+                        also running the prerequisite in this submission. 
+                        Optionally takes one parameter (ratv) to find a prerequisite with a different ratv.
   --force-prereq-pass MODULE PASSNO
                         Force a prereq to use a particular pass instead
   --testing-nocal       Test mode, force ignore of calibration locks
