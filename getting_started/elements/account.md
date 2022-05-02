@@ -59,7 +59,8 @@ ssh -i <private ssh key file name> snoplusprod@snoplusprod.ph.liv.ac.uk
 
 ---
 
-### **Illume** (only necessary under specific circumstances)
+### **Depreciated/Jamie Rajewski not working with SNO+**
+### **Illume** (only necessary under specific circumstances)  
 * To apply for an account on Illume, you can email the administrator, **Jamie Rajewski** at **jrajewsk@ualberta.ca**. After the account has been approved, you will receive your account and a temporary password, then you can log in to the cluster and change your password using:
 ```bash
 ssh <username>@login.illume.systems
