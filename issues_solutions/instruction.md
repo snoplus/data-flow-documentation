@@ -71,7 +71,7 @@ When there are incomplete or missing information errors produced with `productio
 DFLOW emails show that proxy does not have a production role. These errors are produced by the `gasp_client.py` code in data-flow and sent to snoplus_vosupport. 
   
 **Solution:**
-Run `voms-proxy-info --all` to check the proxy information. If the timeleft field shows 0, the proxy is not active and must be reset by Jamie Rajewski (jrajewsk@ualberta.ca)
+Run `voms-proxy-info --all` to check the proxy information. If the timeleft field shows 0, the proxy is not active and must be reset by Purvi or Deborah Morris (purvi@ualberta.ca, deborahmorris129@gmail.com)
 
 If the timeleft field is non-zero and the production role error persists, please contact Jamie. 
 
@@ -337,7 +337,7 @@ This is a pretty general issue and could be caused by many things, but some comm
 
 3. Make sure transfers on buffer1 are working - this can quickly be verified by looking at Grafana and ensuring all 3 sites show high transfer efficiency; however, you should also check the screens running on buffer1 as well just to ensure there are no errors popping up. If the raw data can't get out of SNOLAB, it can't be used to fulfill the prerequisites for processing (and likewise, run-by-run production also won't have the runs appropriate to simulate off of).
 
-If all of this fails, consult Jamie Rajewski (jrajewsk@ualberta.ca) or Purvi S. (purvi@ualberta.ca).
+If all of this fails, consult Deborah Morris (deborahmorris129@gmail.com) or Purvi (purvi@ualberta.ca).
 
 ---
 
