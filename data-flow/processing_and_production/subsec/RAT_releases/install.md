@@ -12,7 +12,7 @@ The official documentation for uploading to CVMFS can be found [here](https://wi
 
 ### **NEW, EASIER METHOD (As of 2020) - cvmfs-pusher Docker Container**
 
-A new tool, located on the SNO+ GitHub [here](https://github.com/snoplus/cvmfs-pusher), is a pre-configured Docker container set up to walk you through the steps of building and pushing a new RAT release. Although it is designed for RAT, one can look at the script and see the relevant parts for simply getting software pushed to CVMFS (while referencing the below guide). The documentation on the page and the bash script should be sufficient for walking you through it, but if you have questions, please consult **Jamie Rajewski (jrajewsk@ualberta.ca)**.
+A new tool, located on the SNO+ GitHub [here](https://github.com/snoplus/cvmfs-pusher), is a pre-configured Docker container set up to walk you through the steps of building and pushing a new RAT release. Although it is designed for RAT, one can look at the script and see the relevant parts for simply getting software pushed to CVMFS (while referencing the below guide). 
 
 ### **OLD, DIFFICULT AND TIME-CONSUMING METHOD - Using a Virtual Machine**
 
