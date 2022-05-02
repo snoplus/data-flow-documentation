@@ -34,7 +34,7 @@ You should see it authenticate and login to CouchDB - this is because the result
 ```bash
 mv production_information_6_18_7.py ../modules
 ```
-At this point, it is now available **ONLY ON THIS SITE**. Please commit it to Git so that it can then be pulled at each of our other sites. You may not have permission to commit on a site's data-flow repo, in which case please inform one of the current administrators (at this time that would be **Jamie Rajewski, jrajewsk@ualberta.ca** and **Purvi S., purvi@ualberta.ca**)
+At this point, it is now available **ONLY ON THIS SITE**. Please commit it to Git so that it can then be pulled at each of our other sites. You may not have permission to commit on a site's data-flow repo, in which case please inform one of the current administrators (at this time that would be **Deborah Morris, deborahmorris129@gmail.com** and **Purvi, purvi@ualberta.ca**)
 
 5. Update the **sites** files on **ALL** the sites that you will be running this production on. This can be done by looking in `data-flow/gasp/sites/` where you will see two files: a processing and a production one with the site name. If you edit one, you will see a massive structure of RAT versions - simply follow the same scheme to add the RAT version that you will be using to the appropriate file. The site files are **not** committed to Git as they are site-specific, so after adding it, you are done.
 
