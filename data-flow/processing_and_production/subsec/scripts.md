@@ -20,4 +20,4 @@ nav_order: 2
 * [storage_element_usage.py](./scripts/storage_element_usage_py.md)
 * [automate_resubmission.py](./scripts/automate_resubmission_py.md)
 * [upload_production_info.py](./scripts/upload_production_info_py.md)
-* [correct_datadoc_on_tape.py](./scripts/correct_datadoc_on_tape_py.md) script to correct locations in data documents, when a job has been moved to or moved back from tape
+* [correct_datadoc_on_tape.py](data-flow/database_validation/subsec/scripts/correct_datadoc_on_tape_py.md) script to correct locations in data documents, when a job has been moved to or moved back from tape
