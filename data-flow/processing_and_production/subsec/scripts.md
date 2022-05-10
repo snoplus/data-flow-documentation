@@ -15,7 +15,7 @@ nav_order: 2
 * [production_submit.py](./scripts/production_submit_py.md)
 * [offline_processing.py](./scripts/offline_processing_py.md)
 * [cancel_jobs.py](./scripts/cancel_jobs_py.md)
-* [misc/make_production](./scripts/misc_make_production.md)
+* [make_production.py](./scripts/make_production.md)
 * [delete_jobs.py](./scripts/delete_jobs_py.md)
 * [storage_element_usage.py](./scripts/storage_element_usage_py.md)
 * [automate_resubmission.py](./scripts/automate_resubmission_py.md)
