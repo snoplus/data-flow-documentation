@@ -13,3 +13,6 @@ To clone a repository, you must use the git URL rather than the typical git@gith
 git clone https://github.com/snoplus/rat
 ```
 There are many git tutorials online to help you understand the interaction with git. For details on the preferred git hub interaction for SNO+, see [DocDB 1462](https://www.snolab.ca/snoplus/private/DocDB/cgi/ShowDocument?docid=1462).
+
+-----
+You can use `git pull ssh master` on Cedar to prevent breaking git after we source our environment script.
