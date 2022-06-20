@@ -12,7 +12,7 @@ nav_order: 7
 
 General issues/inquiries/requests regarding Compute Canada resources like **Cedar** and our primary storage site, **snopse1**
 
-support@computecanada.ca
+support@tech.alliancecan.ca
 
 [Refer to the following before sending your request](https://docs.computecanada.ca/wiki/Technical_support)
 
