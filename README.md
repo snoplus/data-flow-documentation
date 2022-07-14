@@ -36,10 +36,6 @@ Let's say we want to add a new section to the documentation for Grid-related doc
 def main():
   print("Hello World!")
 ```
-```bash
-echo "Hello World!"
-```
-
 ## Useful Resources for Contributing
 * [Github Markdown Syntax Guide](https://guides.github.com/features/mastering-markdown/)
 * [Official Github Pages + Jekyll Reference](https://docs.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll)
