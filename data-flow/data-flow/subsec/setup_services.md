@@ -47,7 +47,7 @@ sudo /etc/init.d/globus-gridftp-server restart
 
 The **user** certificate is under Carsten CN and exists on both cedar and buffer1 under the `~/.globus` directory
 
-The **host** certificate exists only on buffer1 under the `/etc/grid-security/` directory, and was updated on **June 17 2021** set to expire on **July 16 2022**.
+The **host** certificate exists only on buffer1 under the `/etc/grid-security/` directory, and was updated on **July 19 2022** set to expire on **August 18 2023**.
 
 ## Updating the gridmap-file:
 In the event that the production certificate was updated with a new DN (new username), a gridmap-file needs to be updated in order to push files from buffer1 to the FTS. This file exists under `/etc/grid-security/grid-mapfile` on buffer1 and can be automatically updated via:
