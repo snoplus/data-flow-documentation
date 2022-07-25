@@ -19,6 +19,7 @@ You will need a GRID certificate to access many websites and resources within SN
 3. **For users from other countries**, please follow the instructions [here](https://snopl.us/docs/rat/grid_manual/html/certificates_and_initial_setup.html).
 4. After receiving the response, you can download and import the certificate into Firefox. While downloading the certificate the page will ask for a password associated with your key - input the **PIN** that was created in step 2.
 5. Finally, you need to [apply to join the SNO+ virtual organisation (VO)](https://voms.gridpp.ac.uk:8443/voms/snoplus.snolab.ca). **Remember to use Firefox with an imported certificate.** 
+6. After your request gets accepted, you need to apply/request for a production role on VOMS. You can do that from the [home page](https://voms.gridpp.ac.uk:8443/voms/snoplus.snolab.ca).
 
 ---
 
