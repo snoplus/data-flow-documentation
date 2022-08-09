@@ -20,8 +20,8 @@ dirac-proxy-init -g snoplus.snolab.ca_user -v 1000:00
 dirac-proxy-init -g snoplus.snolab.ca_production -v 1000:00 
 
 # Generaate proxies that are stored locally for job submission
-dirac-proxy-init -g snoplus.snolab.ca_user -v 1000:00 -M -u $HOME/grid/proxy/dirac_user_proxy
-dirac-proxy-init -g snoplus.snolab.ca_production -v 1000:00 -M -u $HOME/grid/proxy/dirac_production_proxy
+dirac-proxy-init -g snoplus.snolab.ca_user -v 1000:00 -M -u $HOME/data-flow/grid/dirac_user_proxy  # (Check where you are storing dirac_user/production proxy file, this is where it is stored on Liverpool)
+dirac-proxy-init -g snoplus.snolab.ca_production -v 1000:00 -M -u $HOME/data-flow/grid/dirac_production_proxy
 ```
 
 ### For All Systems:
