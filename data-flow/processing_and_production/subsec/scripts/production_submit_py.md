@@ -8,30 +8,24 @@ nav_exclude: true
 
 This script is used to add production jobs to a database, note that it should not be used for processing jobs.
 ```bash
-usage: production_submit.py [-h] [-t RATDB_TAG] [-o FILE] 
-                            [--database DATABASE] [--server SERVER]
-                            [--testing-nodb]
-
-                            jobfile
+usage: production_submit.py [-h] [-t RATDB_TAG] [-o FILE] [--testing-nodb] [-L, FILE] config jobfile
 
 Submits production jobs.
 
 positional arguments:
-  jobfile              JSON document describing jobs to submit
+  config                Specify path to config file
+  jobfile               JSON document describing jobs to submit
 
 optional arguments:
-  -h, --help           show this help message and exit
-  --database DATABASE  CouchDB database to use
-  --server SERVER      CouchDB server to use
-  -o FILE, --outlist FILE
-                       File to append the created passes to. Useful to track
-                       which passes are created for production runlists
+  -h, --help            show this help message and exit
   -t RATDB_TAG, --ratdb-tag RATDB_TAG
-                       Use a tagged RATDB state instead of the live version.
-  -L FILE, --runlist FILE       
-                       Run production over a newline-delimited file list of
-                       run numbers
-  --testing-nodb       Do not commit changes to DB
+                        Use a tagged RATDB state instead of the live version.
+  -o FILE, --outlist FILE
+                        File to append the created passes to. Useful to track which passes are created for production runlists
+  --testing-nodb        Do not commit changes to DB
+  -L, FILE, --runlist FILE
+                        Run production over a newline-delimited file list of run numbers
+
   ```
   The script requires preparation of a job description file containing JSON that describes the jobs to be added. There is an option to produce Monte Carlo against a “frozen” RATDB database that should be used for large requests in case someone uploads a new table. There is also an option to have an output list that can be used to download Monte Carlo using the exactly option in the grid tools of rat-tools. The overall structure of the JSON depends on the types of jobs being added to the database. The following should cover most of the expected formats:
   ### Jobs to be run by time:
