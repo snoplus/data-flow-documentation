@@ -53,9 +53,10 @@ nav_order: 5
   ```
   Now you are ready to submit the request:
   ```python
-  python bin/production_submit.py ~/<my_temp_dir>/<file>.json -t <Rat DB Tag> -o ~/<my_temp_dir>/<file_name>.exactly -L ~/<my_temp_dir>/<file_name>.txt
+  python bin/production_submit.py -t <Rat DB Tag> -o ~/<my_temp_dir>/<file_name>.exactly -L ~/<my_temp_dir>/<file_name>.txt config jobfile
   ```
   where `<file_name>.exactly` is the name of the output file, containing a list of all of the things submitted. It is important to keep track of these files, as they are referenced by members of the group so consider making a separate directory for storing these.
+  Just specify the config and jobfile name. DO NOT type out config or jobfile then the name of the file. 
   
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
