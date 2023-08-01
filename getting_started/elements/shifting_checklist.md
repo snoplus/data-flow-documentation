@@ -22,18 +22,18 @@ nav_order: 5
 
   there are a total of six screen sessions you need to worry about. You can use `screen -r <screen name/Id>` to see them. you can use `-x` to see a screen someone else is currently looking at.
 
-  On Buffer1:
-    **dflow_register** registers new incoming raw files
-    **offsite_transfers** handels the transfers from buffer 1 to the grid storage.
+  On Buffer1:  
+  **dflow_register** registers new incoming raw files  
+  **offsite_transfers** handles the transfers from buffer 1 to the grid storage.  
+  
+  On cedar1:  
+  **benchmarking** submits benchmarking jobs to cedar  
+  **offline_processing** creates and inserts processing jobs to the database for incoming data.  
 
-  On cedar1:
-    **benchmarking** submits benchmarking jobs to cedar
-    **offline_processing** creates and inserts processing jobs to the database for incoming data.
-
-  On liverpool:
-    **enqueue_processing** submits and monitors processing Dirac jobs through ganga.
-    **enqueue_production** submits and monitors production Dirac jobs through ganga.
-
+  On liverpool:  
+  **enqueue_processing** submits and monitors processing Dirac jobs through ganga.  
+  **enqueue_production** submits and monitors production Dirac jobs through ganga.  
+  
   If the screens on B1 need to be relaunched, first kill them and then run `~/data-flow/cron/launch_processing_screen/launch_dataflow.sh`. 
   if the other screens need to be relaunched go to the [cedar](https://github.com/snoplus/data-flow/actions/workflows/start-screens-cedar.yml) or [liverpool](https://github.com/snoplus/data-flow/actions/workflows/start-screens-liverpool.yml), this will kill and relaunch the screens on that site. If the action says `This workflow was disabled manually.` ssh to the site, kill the screen, git pull and run `~/data-flow/cron/launch_processing_screen/launch_processing.sh`, the variables in `launch_processing_settings.sh` denote which screens will be launched, so modify them to true/false accordingly.
   
