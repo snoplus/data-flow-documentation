@@ -20,11 +20,22 @@ nav_order: 5
 
 * Screen sessions
 
-  We use screen sessions to monitor and submit jobs. Screen sessions only exist on **cedar1** and **liverpool**. You can use `screen -r` to see them. 
-  
-  On cedar1, there should only be **benchmarking** and **offline_processing** screen sessions (the former submits and monitors benchmarking jobs, the latter inserts processing jobs to the database). If either or both screens are missing or having issues, they can be relaunched by running `~/data-flow/cron/launch_processing_screen/launch_processing.sh`
-  
-  On liverpool, there will always be at least one screen tab running, **enqueue_processing**, which checks the couch database for any jobs to submit and submits them. If a production was submitted, then **enqueue_production** should also be running which will submit these production jobs. If the screens need to be relaunched, first kill them and then run `~/data-flow/cron/launch_processing_screen/launch_processing.sh`. The variables at the top of `launch_processing.sh` denote which screens will be launched, so modify them to true/false accordingly.
+  there are a total of six screen sessions you need to worry about. You can use `screen -r <screen name/Id>` to see them. you can use `-x` to see a screen someone else is currently looking at.
+
+  On Buffer1:
+    **dflow_register** registers new incoming raw files
+    **offsite_transfers** handels the transfers from buffer 1 to the grid storage.
+
+  On cedar1:
+    **benchmarking** submits benchmarking jobs to cedar
+    **offline_processing** creates and inserts processing jobs to the database for incoming data.
+
+  On liverpool:
+    **enqueue_processing** submits and monitors processing Dirac jobs through ganga.
+    **enqueue_production** submits and monitors production Dirac jobs through ganga.
+
+  If the screens on B1 need to be relaunched, first kill them and then run `~/data-flow/cron/launch_processing_screen/launch_dataflow.sh`. 
+  if the other screens need to be relaunched go to the [cedar](https://github.com/snoplus/data-flow/actions/workflows/start-screens-cedar.yml) or [liverpool](https://github.com/snoplus/data-flow/actions/workflows/start-screens-liverpool.yml), this will kill and relaunch the screens on that site. If the action says `This workflow was disabled manually.` ssh to the site, kill the screen, git pull and run `~/data-flow/cron/launch_processing_screen/launch_processing.sh`, the variables in `launch_processing_settings.sh` denote which screens will be launched, so modify them to true/false accordingly.
   
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -45,15 +56,16 @@ nav_order: 5
   ```bash
   scp <file1> <file2> username@cedar.computecanada.ca:~/<my_temp_dir>
   ```
+  if the file is short you can just copy it through the termanal. 
   Once the files are on Cedar, source the data-flow environment:
   ```bash
   cd ~/data-flow
-  source env.sh
+  source envpy3.sh
   cd gasp
   ```
   Now you are ready to submit the request:
-  ```python
-  python bin/production_submit.py ~/<my_temp_dir>/<file>.json -t <Rat DB Tag> -o ~/<my_temp_dir>/<file_name>.exactly -L ~/<my_temp_dir>/<file_name>.txt
+  ```
+  python bin/production_submit.py config/<production config> ~/<my_temp_dir>/<file>.json -t <Rat DB Tag> -o ~/<my_temp_dir>/<file_name>.exactly -L ~/<my_temp_dir>/<file_name>.txt
   ```
   where `<file_name>.exactly` is the name of the output file, containing a list of all of the things submitted. It is important to keep track of these files, as they are referenced by members of the group so consider making a separate directory for storing these.
   
@@ -77,6 +89,10 @@ nav_order: 5
   - nhit cut = 40
   - macro = https://github.com/snoplus/rat/blob/master/mac/processing/neck_fill/third_pass_analysis_processing_classifier.mac
   ```
+  most of them can now be submited through the action, go [here](https://github.com/snoplus/data-flow/actions/workflows/submit-reprocessing-list.yml), copy the contence of the `.txt` file into `the list of run numbers`, select the ratv and other paramters and click `run workflow`
+  if any of the options are missing edit the file [here](https://github.com/snoplus/data-flow/blob/master/.github/workflows/submit-reprocessing-list.yml) to add them.
+
+  here are the instructuons to do it manualy:
 
   Reprocessing requests will also be followed by attachments, usually a `.txt` runlist file. Copy this to Cedar into a temporary directory:
   ```bash
@@ -92,7 +108,7 @@ nav_order: 5
   Once the file is on Cedar and the module is in the right place, source the data-flow environment:
   ```bash
   cd ~/data-flow
-  source env.sh
+  source envpy3.sh
   cd gasp
   ```
   Now you are ready to submit the request:
@@ -114,9 +130,26 @@ nav_order: 5
 
   We have a automatic script `~/cron/retry_jobs.sh` that will resubmit certain failed jobs that satisfy some specific requirements twice a day and retry_failed.py has been integrated   into gasp_client to resubmit part failed and failed jobs **only after run 270000**; this works for both Processing as well as Productions jobs. But there are still some other jobs that have to be submitted manually.
   * Part Failed jobs
-    Sometimes we need to rsubmit part failed jobs. Use retry_failed.py to resubmit them instead of using offline_processing .py which would give these jobs a new unwanted pass.
+    Sometimes we need to resubmit part failed jobs. Use retry_failed.py to resubmit them instead of using offline_processing.py which would give these jobs a new unwanted pass.
   * Identify issues.
     We usually have email notifications turned on for failure jobs, the execution log will be attached along with the email. If the email includes `Note, no attachments for error/output logs!`, this means the job has no execution log, this usually happen when a job fails before actually running, which can be solved by resubmission. If you want further information, you can get `dirac_id` in its data document, and search that on [Dirac monitoring page](https://dirac.gridpp.ac.uk:8443/DIRAC/).
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* draining the queue
+
+  If something goes wrong with the jobs or something you may need to remove all the jobs from the clusters:
+  **processing**:
+  ```bash
+  cd ~/data-flow/tree/master/cron
+  screen -S drain ./processing/enqueue_processing_drain.sh
+  ```  
+  **production**:
+
+  ```bash
+  cd ~/data-flow/tree/master/cron
+  screen -S drain ./production/enqueue_production_drain.sh
+  ```
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
