@@ -62,6 +62,10 @@ ssh -i <private ssh key file name> snoplusprod@snoplusprod.ph.liv.ac.uk
 
 Deborah Morris (deborah.morris@snolab.ca) or Mark Ward (mark.ward@snolab.ca)
 
+note that the ssh version on buffer 1 is quite out of date so to get it to accept ypu certificate you may need to add ssh-rsa to the oPubkeyAcceptedKeyTypes and oHostKeyAlgorithms
+```bash
+ssh -i <private ssh key file name>  -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedKeyTypes=+ssh-rsa snotflow@buffer1.sp.snolab.ca
+```
 ---
 
 ### **SNOLAB**
