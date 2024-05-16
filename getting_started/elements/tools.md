@@ -50,7 +50,9 @@ A VPN is required to access Buffer1 and various other SNO+ resources; please fol
 Once you sign up for a SNOLAB account, you can join various mailing lists. Two of the most important mailing lists are:
 * snoplus_vosupport@snolab.ca
 * snoplusdata@snolab.ca
-  
+
+I will warn you to send at least snoplus_vosupport to its own folder, it gets a **lot** of messages
+
 There are two ways to join the lists:
 * Click [here](https://www.snolab.ca/sympa/search_list_request) and search for the mailing list you want to join
 * Email sympa@snolab.ca in the following format:
