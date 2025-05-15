@@ -42,6 +42,9 @@ Grafana shows us the transfer status of data from SNOLAB being triplicated to ou
 #### **GGUS**
 GGUS is where requests are sent for issues with our **RAL** (UK) storage site, **Liverpool** node, **CVMFS**, and **Dirac** system. Please see the GGUS section of the [Contact List](../../communication/list.md) for more information.
 
+[https://helpdesk.ggus.eu/](helpdesk.ggus.eu)
+
+Old one:
 [https://ggus.eu/](https://ggus.eu/)
 
 #### **Twiki**
