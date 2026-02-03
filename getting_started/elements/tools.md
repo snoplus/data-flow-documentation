@@ -39,7 +39,7 @@ After the generation, you will see two files; one is the `<name>` you entered be
 
 ### **VPN**
 A VPN is required to access Buffer1 and various other SNO+ resources; please follow the instructions to install it.
-1. Go to [this link](https://snolab.sharepoint.com/:u:/r/sites/ITSupport/SitePages/Access-to-VPN%26ZTNA.aspx)) which is the internal site for SNOLAB
+1. Go to [this link](https://snolab.sharepoint.com/:u:/r/sites/ITSupport/SitePages/Access-to-VPN%26ZTNA.aspx) which is the internal site for SNOLAB
 2. select you operating system and follow the instructions.
 
 
